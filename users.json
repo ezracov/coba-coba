@@ -1,14 +1,1426 @@
 [
-  {
-    "id": 1,
-    "name": "Ezra",
-    "token": "abc123",
-    "role": "Accounting Supervisor"
-  },
-  {
-    "id": 2,
-    "name": "Andi",
-    "token": "xyz789",
-    "role": "Production Staff"
-  }
+{" token" : "109", "nama": "REZA DOYOK", "pangkalan": "JRC"}
+{" token" : "175", "nama": "SANDI", "pangkalan": "SAVANA"}
+{" token" : "031", "nama": "DENI KOKO", "pangkalan": "EXIST"}
+{" token" : "111", "nama": "H BABAS", "pangkalan": "JRC"}
+{" token" : "108", "nama": "TYO", "pangkalan": "JRC"}
+{" token" : "096", "nama": "RINA", "pangkalan": "IPPA"}
+{" token" : "377", "nama": "ERIF SULTAN", "pangkalan": "FREELANCE"}
+{" token" : "540", "nama": "DEDE ACIL", "pangkalan": "BDC"}
+{" token" : "178", "nama": "DEMI", "pangkalan": "SAVANA"}
+{" token" : "101", "nama": "YUDA", "pangkalan": "JRC"}
+{" token" : "354", "nama": "H RIKI", "pangkalan": "BLOK M"}
+{" token" : "422", "nama": "ODEN RENDI", "pangkalan": "NEWSTAR"}
+{" token" : "176", "nama": "NOVA", "pangkalan": "SAVANA"}
+{" token" : "067", "nama": "RAFLI", "pangkalan": "NNC"}
+{" token" : "219", "nama": "AMIR", "pangkalan": "SK"}
+{" token" : "172", "nama": "YADI", "pangkalan": "SAVANA"}
+{" token" : "370", "nama": "KIKIN", "pangkalan": "FREELANCE"}
+{" token" : "473", "nama": "YANA", "pangkalan": "FYP"}
+{" token" : "368", "nama": "ARIS", "pangkalan": "LF"}
+{" token" : "193", "nama": "DAMAR", "pangkalan": "LF"}
+{" token" : "214", "nama": "JENAL", "pangkalan": "TR FAMILY"}
+{" token" : "281", "nama": "H OBENG", "pangkalan": "FREELANCE"}
+{" token" : "173", "nama": "*HAMID", "pangkalan": "SAVANA"}
+{" token" : "066", "nama": "CEPIH", "pangkalan": "NNC"}
+{" token" : "201", "nama": "AGUS", "pangkalan": "LF"}
+{" token" : "094", "nama": "DEVI", "pangkalan": "IPPA"}
+{" token" : "121", "nama": "AJUM", "pangkalan": "JRC"}
+{" token" : "276", "nama": "NABIL LEMON", "pangkalan": "FREELANCE"}
+{" token" : "367", "nama": "IWA ABU AHMAD", "pangkalan": "SAHL TOUR"}
+{" token" : "446", "nama": "FEBI", "pangkalan": "LF"}
+{" token" : "110", "nama": "ERI", "pangkalan": "JRC"}
+{" token" : "174", "nama": "ABAS", "pangkalan": "SAVANA"}
+{" token" : "145", "nama": "ABU FAHMI", "pangkalan": "IPPA"}
+{" token" : "117", "nama": "JANI", "pangkalan": "JRC"}
+{" token" : "078", "nama": "YUNUS", "pangkalan": "NNC"}
+{" token" : "392", "nama": "MAS NAJI", "pangkalan": "LF"}
+{" token" : "085", "nama": "ZIDAN", "pangkalan": "TR FAMILY"}
+{" token" : "001", "nama": "JAYA", "pangkalan": "NNC"}
+{" token" : "426", "nama": "H AHMAD", "pangkalan": "BDC"}
+{" token" : "318", "nama": "SOBRI", "pangkalan": "CRC 1"}
+{" token" : "552", "nama": "YUDI", "pangkalan": "LF"}
+{" token" : "371", "nama": "YUSUF", "pangkalan": "WRC"}
+{" token" : "073", "nama": "DAYAT", "pangkalan": "NNC"}
+{" token" : "086", "nama": "FAHRI", "pangkalan": "PESONA ALAM"}
+{" token" : "499", "nama": "ANDI", "pangkalan": "NEWSTAR"}
+{" token" : "328", "nama": "RENDI", "pangkalan": "JDC"}
+{" token" : "394", "nama": "AGUS", "pangkalan": "PARTNER"}
+{" token" : "233", "nama": "RUDI", "pangkalan": "NEWSTAR"}
+{" token" : "191", "nama": "FIRMAN", "pangkalan": "JDC"}
+{" token" : "146", "nama": "TEDI", "pangkalan": "IPPA"}
+{" token" : "330", "nama": "SALIM", "pangkalan": "H2GU"}
+{" token" : "033", "nama": "ILHAM (GUNDEL)", "pangkalan": "BDHAZ"}
+{" token" : "253", "nama": "FERDIANSYAH SURKEN", "pangkalan": "FREELANCE"}
+{" token" : "453", "nama": "P AGUS", "pangkalan": "RANTAU"}
+{" token" : "431", "nama": "KOBE", "pangkalan": "NEWSTAR"}
+{" token" : "137", "nama": "ARIF", "pangkalan": "JRC"}
+{" token" : "526", "nama": "KIKI", "pangkalan": "LF"}
+{" token" : "041", "nama": "SAKUY", "pangkalan": "EXIST"}
+{" token" : "083", "nama": "JAMAL", "pangkalan": "LF"}
+{" token" : "395", "nama": "ASEP HAMZAH", "pangkalan": "FAMILY"}
+{" token" : "640", "nama": "MAULANA YUSUF KB", "pangkalan": "BGC"}
+{" token" : "868", "nama": "ANDI", "pangkalan": "SK"}
+{" token" : "123", "nama": "KODEL", "pangkalan": "JRC"}
+{" token" : "320", "nama": "ANGGA", "pangkalan": "JDC"}
+{" token" : "447", "nama": "RIKI", "pangkalan": "CRC 2"}
+{" token" : "124", "nama": "ACIL", "pangkalan": "JRC"}
+{" token" : "673", "nama": "ENDANG", "pangkalan": "IPPA"}
+{" token" : "105", "nama": "JAMIL", "pangkalan": "JRC"}
+{" token" : "100", "nama": "UUS HASANUDIN", "pangkalan": "IPPA"}
+{" token" : "153", "nama": "YADIN", "pangkalan": "CRC 2"}
+{" token" : "288", "nama": "EKO", "pangkalan": "FMID"}
+{" token" : "441", "nama": "HENDRA SURKEN", "pangkalan": "SURKEN"}
+{" token" : "212", "nama": "FAUZI", "pangkalan": "CRC 2"}
+{" token" : "195", "nama": "IWAN", "pangkalan": "GHIBET"}
+{" token" : "829", "nama": "HERU", "pangkalan": "CRC 1"}
+{" token" : "588", "nama": "MONCES", "pangkalan": "ARRAHIM"}
+{" token" : "042", "nama": "APEP", "pangkalan": "GHIBET"}
+{" token" : "287", "nama": "CAKIM", "pangkalan": "JABAL AHDAR"}
+{" token" : "444", "nama": "RIAN", "pangkalan": "H2GU"}
+{" token" : "230", "nama": "ZAKI", "pangkalan": "4G"}
+{" token" : "062", "nama": "UDIN", "pangkalan": "EXIST"}
+{" token" : "375", "nama": "BONDOL", "pangkalan": "H2GU"}
+{" token" : "095", "nama": "PENDI", "pangkalan": "IPPA"}
+{" token" : "679", "nama": "NURAENI", "pangkalan": "LF"}
+{" token" : "911", "nama": "HENDI", "pangkalan": "4G"}
+{" token" : "515", "nama": "EKO 081281110874", "pangkalan": "FREELANCE"}
+{" token" : "479", "nama": "H ANDI", "pangkalan": "SEKTOR C"}
+{" token" : "149", "nama": "H SIDIK", "pangkalan": "SAVANA"}
+{" token" : "385", "nama": "SOFYAN 085703099991", "pangkalan": "SK"}
+{" token" : "010", "nama": "RIKO", "pangkalan": "FAMILY"}
+{" token" : "184", "nama": "ZAKI", "pangkalan": "CRC 2"}
+{" token" : "539", "nama": "AYI", "pangkalan": "ARAHMAH"}
+{" token" : "047", "nama": "CANDRA", "pangkalan": "GHIBET"}
+{" token" : "432", "nama": "BULDAN", "pangkalan": "H2GU"}
+{" token" : "315", "nama": "H SYROD", "pangkalan": "HABIBI FAMILY"}
+{" token" : "084", "nama": "CEPIH", "pangkalan": "FAMILY"}
+{" token" : "757", "nama": "ILYAS", "pangkalan": "NEWSTAR"}
+{" token" : "044", "nama": "YUSUF", "pangkalan": "EXIST"}
+{" token" : "186", "nama": "ALEX", "pangkalan": "LF"}
+{" token" : "413", "nama": "H DAYAT KB PALACE", "pangkalan": "FREELANCE KB"}
+{" token" : "532", "nama": "ARMAN", "pangkalan": "SEKTOR C"}
+{" token" : "634", "nama": "IBUNG", "pangkalan": "CRC 2"}
+{" token" : "527", "nama": "YOGI", "pangkalan": "BBS"}
+{" token" : "311", "nama": "MAS EKO JKT", "pangkalan": "FREELANCE"}
+{" token" : "565", "nama": "SAEFUL HENDRIK", "pangkalan": "TR FAMILY"}
+{" token" : "312", "nama": "HAKIM", "pangkalan": "CRC 2"}
+{" token" : "205", "nama": "BOWO", "pangkalan": "JDC"}
+{" token" : "285", "nama": "KIKI", "pangkalan": "FAMILY"}
+{" token" : "670", "nama": "UJ", "pangkalan": "CRC 2"}
+{" token" : "336", "nama": "DARUS", "pangkalan": "NNC"}
+{" token" : "342", "nama": "MUHAMAD", "pangkalan": "ALHALIJI"}
+{" token" : "147", "nama": "IRFAN", "pangkalan": "IPPA"}
+{" token" : "384", "nama": "MUNIR ROMI", "pangkalan": "FAMILY"}
+{" token" : "289", "nama": "ZAKY", "pangkalan": "GSPI"}
+{" token" : "1223", "nama": "HERDI", "pangkalan": "PARTNER"}
+{" token" : "348", "nama": "YANA", "pangkalan": "FAMILY"}
+{" token" : "070", "nama": "YADI", "pangkalan": "NNC"}
+{" token" : "765", "nama": "MUHAMAD MUSA", "pangkalan": "GUNUNG JATI"}
+{" token" : "144", "nama": "INDRA", "pangkalan": "IPPA"}
+{" token" : "383", "nama": "IHSAN", "pangkalan": "BBS"}
+{" token" : "572", "nama": "DEDE NURDIN", "pangkalan": "DESTROY"}
+{" token" : "682", "nama": "BP OLOT", "pangkalan": "NEWSTAR"}
+{" token" : "006", "nama": "TAUFIK", "pangkalan": "BDC"}
+{" token" : "1003", "nama": "JANGEL", "pangkalan": "CRC 1"}
+{" token" : "135", "nama": "SIGIT", "pangkalan": "JRC"}
+{" token" : "475", "nama": "UCUP", "pangkalan": "SK"}
+{" token" : "578", "nama": "H RIDWAN", "pangkalan": "SK"}
+{" token" : "353", "nama": "ZAKI", "pangkalan": "BLOK M"}
+{" token" : "274", "nama": "ADANG", "pangkalan": "RANTAU"}
+{" token" : "306", "nama": "ASEP GEROBAG", "pangkalan": "FREELANCE"}
+{" token" : "799", "nama": "FAISAL", "pangkalan": "JDC"}
+{" token" : "379", "nama": "RASYID", "pangkalan": "BEDOG LOCOT"}
+{" token" : "210", "nama": "ARUL", "pangkalan": "JDC"}
+{" token" : "496", "nama": "HAMDAN", "pangkalan": "ALAKEFEK"}
+{" token" : "208", "nama": "H SAGIR", "pangkalan": "H2GU"}
+{" token" : "576", "nama": "JAWA", "pangkalan": "4G"}
+{" token" : "806", "nama": "ALO KARAWANG", "pangkalan": "SDS"}
+{" token" : "813", "nama": "AGUS ERI", "pangkalan": "BDC"}
+{" token" : "127", "nama": "EMBING", "pangkalan": "JRC"}
+{" token" : "134", "nama": "RANI", "pangkalan": "JRC"}
+{" token" : "837", "nama": "MUSTADI", "pangkalan": "GUNUNG JATI"}
+{" token" : "190", "nama": "ACE", "pangkalan": "ASR"}
+{" token" : "590", "nama": "FAISAL (ISAL)", "pangkalan": "BDHAZ"}
+{" token" : "185", "nama": "FINO", "pangkalan": "SK"}
+{" token" : "232", "nama": "ARI", "pangkalan": "SAVANA"}
+{" token" : "140", "nama": "SOFIYULLOH", "pangkalan": "IPPA"}
+{" token" : "555", "nama": "ERIK", "pangkalan": "SK"}
+{" token" : "672", "nama": "DODI", "pangkalan": "ADC"}
+{" token" : "424", "nama": "DODI", "pangkalan": "IGP"}
+{" token" : "039", "nama": "FIRDAUS", "pangkalan": "EXIST"}
+{" token" : "705", "nama": "HERMAN (CHEMONK)", "pangkalan": "BDHAZ"}
+{" token" : "633", "nama": "HENDRA", "pangkalan": "BLOK M"}
+{" token" : "024", "nama": "NOOR SODIK JKT PDC", "pangkalan": "FREELANCE"}
+{" token" : "898", "nama": "IDRIS", "pangkalan": "H2GU"}
+{" token" : "152", "nama": "IYANG", "pangkalan": "SAVANA"}
+{" token" : "009", "nama": "ABDURAHMAN", "pangkalan": "AL FARUQ"}
+{" token" : "035", "nama": "*RUSLI EFENDI (ULI)", "pangkalan": "BDHAZ"}
+{" token" : "746", "nama": "H ADE", "pangkalan": "NEWSTAR"}
+{" token" : "181", "nama": "RIDWAN ALAWI", "pangkalan": "AL FARUQ"}
+{" token" : "130", "nama": "OZI", "pangkalan": "JRC"}
+{" token" : "299", "nama": "ARIF", "pangkalan": "GHIBET"}
+{" token" : "570", "nama": "YADI KACAMATA", "pangkalan": "FREELANCE"}
+{" token" : "650", "nama": "ANTO", "pangkalan": "NEWSTAR"}
+{" token" : "579", "nama": "ANAS", "pangkalan": "TR FAMILY"}
+{" token" : "263", "nama": "AMIN", "pangkalan": "SEKTOR C"}
+{" token" : "007", "nama": "UJANG SUHERMAN", "pangkalan": "ALAKEFEK"}
+{" token" : "563", "nama": "FERI KACAMATA", "pangkalan": "NEWSTAR"}
+{" token" : "793", "nama": "HERDI", "pangkalan": "SAHL TOUR"}
+{" token" : "512", "nama": "MAULANA NASIR", "pangkalan": "FREELANCE"}
+{" token" : "927", "nama": "OSCAR", "pangkalan": "PPGC"}
+{" token" : "372", "nama": "KONDE GARASI", "pangkalan": "FREELANCE"}
+{" token" : "535", "nama": "HISYAM", "pangkalan": "ALHALIJI"}
+{" token" : "485", "nama": "YAYAN NAZWA", "pangkalan": "CRC 2"}
+{" token" : "247", "nama": "IKI", "pangkalan": "SEKTOR C"}
+{" token" : "296", "nama": "ISAM", "pangkalan": "HALLA INDONESIA"}
+{" token" : "089", "nama": "AMIN", "pangkalan": "IPPA"}
+{" token" : "639", "nama": "BENI", "pangkalan": "IPPA"}
+{" token" : "677", "nama": "OM JEM", "pangkalan": "ADC"}
+{" token" : "029", "nama": "OPIK", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "397", "nama": "UMAR", "pangkalan": "NEWSTAR"}
+{" token" : "257", "nama": "ZAKY", "pangkalan": "ALHALIJI"}
+{" token" : "494", "nama": "H HOLIL", "pangkalan": "SGA"}
+{" token" : "338", "nama": "HAIDAR", "pangkalan": "WHIFER"}
+{" token" : "351", "nama": "CECEP KUSMAN", "pangkalan": "SAWAG ADAM"}
+{" token" : "503", "nama": "P NUR JKT", "pangkalan": "FREELANCE"}
+{" token" : "814", "nama": "WENDI", "pangkalan": "BBS"}
+{" token" : "518", "nama": "A HABIB", "pangkalan": "FREELANCE"}
+{" token" : "486", "nama": "JAFAR DARMA WISATA", "pangkalan": "FREELANCE"}
+{" token" : "484", "nama": "RONI", "pangkalan": "SK"}
+{" token" : "964", "nama": "ARDAN", "pangkalan": "FAMILY PONCORAN"}
+{" token" : "798", "nama": "MADUN", "pangkalan": "NEWSTAR"}
+{" token" : "669", "nama": "MARWAN KB", "pangkalan": "SDS"}
+{" token" : "569", "nama": "YOGI JKT", "pangkalan": "FREELANCE"}
+{" token" : "979", "nama": "ALDI", "pangkalan": "SK"}
+{" token" : "273", "nama": "RICO", "pangkalan": "BLOK M"}
+{" token" : "164", "nama": "KUBIL", "pangkalan": "SAVANA"}
+{" token" : "012", "nama": "USMAN", "pangkalan": "H2GU"}
+{" token" : "577", "nama": "RIZKI (P OPIK)", "pangkalan": "FREELANCE"}
+{" token" : "036", "nama": "JAJANG (BANGKIT)", "pangkalan": "BDHAZ"}
+{" token" : "132", "nama": "RYAN", "pangkalan": "JRC"}
+{" token" : "052", "nama": "ZAKI", "pangkalan": "BET ASPUR"}
+{" token" : "218", "nama": "RIZAL", "pangkalan": "FAMILY"}
+{" token" : "228", "nama": "TOPAN", "pangkalan": "4G"}
+{" token" : "361", "nama": "HERI", "pangkalan": "KPCP REBORN"}
+{" token" : "859", "nama": "ADAM", "pangkalan": "ARRAHIM"}
+{" token" : "155", "nama": "BENJO", "pangkalan": "SAVANA"}
+{" token" : "139", "nama": "AGAY", "pangkalan": "JRC"}
+{" token" : "958", "nama": "RAHMAT", "pangkalan": "BGC"}
+{" token" : "474", "nama": "DADANG", "pangkalan": "TR FAMILY"}
+{" token" : "1098", "nama": "ABU SULTON", "pangkalan": "BMG"}
+{" token" : "013", "nama": "JAMAL R", "pangkalan": "EXIST"}
+{" token" : "833", "nama": "ADAM", "pangkalan": "CRC 2"}
+{" token" : "229", "nama": "CIWOK", "pangkalan": "JDC"}
+{" token" : "574", "nama": "MAS HERI", "pangkalan": "IGP"}
+{" token" : "114", "nama": "ARIS", "pangkalan": "JRC"}
+{" token" : "683", "nama": "ENTEP", "pangkalan": "IPPA"}
+{" token" : "374", "nama": "SANUT", "pangkalan": "SGA"}
+{" token" : "280", "nama": "AAM", "pangkalan": "DESTROY"}
+{" token" : "223", "nama": "HAFIDZ", "pangkalan": "ALHALIJI"}
+{" token" : "721", "nama": "DEKA", "pangkalan": "BBS"}
+{" token" : "104", "nama": "POLEM", "pangkalan": "JRC"}
+{" token" : "1202", "nama": "HOTIB", "pangkalan": "GSPI"}
+{" token" : "177", "nama": "COMET", "pangkalan": "SAVANA"}
+{" token" : "255", "nama": "DADANG", "pangkalan": "BLOK M"}
+{" token" : "131", "nama": "PIAN", "pangkalan": "JRC"}
+{" token" : "237", "nama": "SUMARNA ADANG", "pangkalan": "NEWSTAR"}
+{" token" : "266", "nama": "HARYANTO", "pangkalan": "IPPA"}
+{" token" : "816", "nama": "MARYAM", "pangkalan": "EXIST"}
+{" token" : "211", "nama": "DAYAT", "pangkalan": "JABAL AHDAR"}
+{" token" : "324", "nama": "ALFI", "pangkalan": "JDC"}
+{" token" : "440", "nama": "YUSUF", "pangkalan": "NEWSTAR"}
+{" token" : "924", "nama": "LAHEMP", "pangkalan": "DESTROY"}
+{" token" : "357", "nama": "IWAN NGUSRUK", "pangkalan": "FREELANCE"}
+{" token" : "469", "nama": "FAHRI", "pangkalan": "SEKTOR C"}
+{" token" : "043", "nama": "FARHAN", "pangkalan": "EXIST"}
+{" token" : "586", "nama": "P SALEH", "pangkalan": "IPPA"}
+{" token" : "448", "nama": "DIAZ", "pangkalan": "ADC"}
+{" token" : "533", "nama": "ISMET UDA", "pangkalan": "WRC"}
+{" token" : "567", "nama": "HENDI", "pangkalan": "SGA"}
+{" token" : "309", "nama": "ALDO", "pangkalan": "IPPA"}
+{" token" : "045", "nama": "RAFLI", "pangkalan": "EXIST"}
+{" token" : "404", "nama": "DAFFA", "pangkalan": "HALLA INDONESIA"}
+{" token" : "331", "nama": "HARDI", "pangkalan": "4G"}
+{" token" : "148", "nama": "DEDE KUSNADI", "pangkalan": "BDC"}
+{" token" : "396", "nama": "DODI", "pangkalan": "SGA"}
+{" token" : "651", "nama": "ALI", "pangkalan": "SAVANA"}
+{" token" : "1114", "nama": "ERWIN", "pangkalan": "SK"}
+{" token" : "192", "nama": "DEDI SETIAWAN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "893", "nama": "DILAH", "pangkalan": "SEKTOR C"}
+{" token" : "554", "nama": "MAS ARIF JKT", "pangkalan": "FREELANCE"}
+{" token" : "265", "nama": "TOM", "pangkalan": "LF"}
+{" token" : "202", "nama": "ARIF", "pangkalan": "LF"}
+{" token" : "887", "nama": "RYAN KEONG", "pangkalan": "DESTROY"}
+{" token" : "506", "nama": "RAJAB", "pangkalan": "JDC"}
+{" token" : "198", "nama": "H JAELANI", "pangkalan": "BLOK M"}
+{" token" : "528", "nama": "YUDI", "pangkalan": "ADC"}
+{" token" : "204", "nama": "CINER", "pangkalan": "H2GU"}
+{" token" : "350", "nama": "ABU AHMAD", "pangkalan": "LF"}
+{" token" : "286", "nama": "PEPEN", "pangkalan": "FYP"}
+{" token" : "505", "nama": "KANDI", "pangkalan": "MANTRA"}
+{" token" : "725", "nama": "NANANG KOSIM", "pangkalan": "KGWM"}
+{" token" : "113", "nama": "H USMAN", "pangkalan": "JRC"}
+{" token" : "213", "nama": "INDRA CIBURIAL", "pangkalan": "FREELANCE"}
+{" token" : "129", "nama": "JIPENG", "pangkalan": "JRC"}
+{" token" : "364", "nama": "KEONG", "pangkalan": "BBS"}
+{" token" : "376", "nama": "DEDI", "pangkalan": "LF"}
+{" token" : "359", "nama": "ACEP", "pangkalan": "BLOK M"}
+{" token" : "284", "nama": "IPUNK", "pangkalan": "SAVANA"}
+{" token" : "794", "nama": "SALIM", "pangkalan": "ARRAHIM"}
+{" token" : "046", "nama": "ROFAL", "pangkalan": "EXIST"}
+{" token" : "141", "nama": "BADRU", "pangkalan": "IPPA"}
+{" token" : "734", "nama": "TAUFIK  AL HASAN", "pangkalan": "FREELANCE"}
+{" token" : "1066", "nama": "LATIEF", "pangkalan": "BMG"}
+{" token" : "680", "nama": "ELONG", "pangkalan": "ADC"}
+{" token" : "382", "nama": "IMAM", "pangkalan": "SK"}
+{" token" : "187", "nama": "JAMIL", "pangkalan": "KGWM"}
+{" token" : "071", "nama": "ANWAR", "pangkalan": "P2C"}
+{" token" : "501", "nama": "DASEP", "pangkalan": "KGWM"}
+{" token" : "019", "nama": "KEBEL", "pangkalan": "SK"}
+{" token" : "536", "nama": "P BAKRI", "pangkalan": "ASR"}
+{" token" : "319", "nama": "H KOSIM", "pangkalan": "ALAKEFEK"}
+{" token" : "329", "nama": "MISBAH", "pangkalan": "SAHL TOUR"}
+{" token" : "840", "nama": "PEPEN (PAUL)", "pangkalan": "BDHAZ"}
+{" token" : "305", "nama": "P YAYAN", "pangkalan": "NEWSTAR"}
+{" token" : "028", "nama": "DERI", "pangkalan": "SK"}
+{" token" : "162", "nama": "DANI", "pangkalan": "SAVANA"}
+{" token" : "268", "nama": "IJAL", "pangkalan": "BEDOG LOCOT"}
+{" token" : "167", "nama": "FAISAL", "pangkalan": "SAVANA"}
+{" token" : "741", "nama": "ADIT", "pangkalan": "BBS"}
+{" token" : "300", "nama": "MUHDI MPCP", "pangkalan": "FREELANCE"}
+{" token" : "180", "nama": "ABU AIMAN BULDAN", "pangkalan": "LF"}
+{" token" : "861", "nama": "ARDAN", "pangkalan": "BBS"}
+{" token" : "595", "nama": "PYTOK", "pangkalan": "ADC"}
+{" token" : "719", "nama": "DAVID PRATAMA (DAVID)", "pangkalan": "BDHAZ"}
+{" token" : "722", "nama": "NANO", "pangkalan": "CRC 1"}
+{" token" : "065", "nama": "HERMAN", "pangkalan": "EXIST"}
+{" token" : "072", "nama": "ASEP", "pangkalan": "ARAHMAH"}
+{" token" : "714", "nama": "LODI AL AHLAM", "pangkalan": "FREELANCE"}
+{" token" : "087", "nama": "OPIK", "pangkalan": "OASIS"}
+{" token" : "749", "nama": "HILMAN", "pangkalan": "ALAKEFEK"}
+{" token" : "560", "nama": "SULAEMAN", "pangkalan": "4G"}
+{" token" : "998", "nama": "ANDRI GAJIM", "pangkalan": "CRC 1"}
+{" token" : "967", "nama": "DESMON SURKEN", "pangkalan": "FREELANCE"}
+{" token" : "008", "nama": "ZAKI NCF", "pangkalan": "FREELANCE"}
+{" token" : "698", "nama": "SANDI", "pangkalan": "P3CB"}
+{" token" : "892", "nama": "IYAN JKT", "pangkalan": "JRC"}
+{" token" : "194", "nama": "P UJANG NAKAL", "pangkalan": "ADC"}
+{" token" : "758", "nama": "H DEDEN", "pangkalan": "ARRAHIM"}
+{" token" : "352", "nama": "DEDI ABU REHAN", "pangkalan": "GHIBET"}
+{" token" : "014", "nama": "YUDI BOKIR", "pangkalan": "MDR"}
+{" token" : "057", "nama": "RENDI", "pangkalan": "CRC 1"}
+{" token" : "546", "nama": "MARZUKI JKT", "pangkalan": "FREELANCE"}
+{" token" : "317", "nama": "ABBAS KB", "pangkalan": "FREELANCE KB"}
+{" token" : "412", "nama": "ADAM MUHAMAD", "pangkalan": "TRIPLE S"}
+{" token" : "935", "nama": "ACIL", "pangkalan": "SGA"}
+{" token" : "209", "nama": "OPIK TEMEN KUS", "pangkalan": "FREELANCE"}
+{" token" : "737", "nama": "RIZA ADITYA PERDANA (IZONK)", "pangkalan": "BDHAZ"}
+{" token" : "784", "nama": "RYAN KEONG", "pangkalan": "BBS"}
+{" token" : "355", "nama": "ATO HANDI", "pangkalan": "FAMILY"}
+{" token" : "398", "nama": "H BADRI", "pangkalan": "CRC 2"}
+{" token" : "157", "nama": "ARIS", "pangkalan": "IGP"}
+{" token" : "530", "nama": "YAHYA", "pangkalan": "CRC 2"}
+{" token" : "381", "nama": "FITRIONO", "pangkalan": "FREELANCE"}
+{" token" : "1280", "nama": "UDIL ADILAH", "pangkalan": "SEKTOR C"}
+{" token" : "519", "nama": "ADULL", "pangkalan": "FREELANCE"}
+{" token" : "1006", "nama": "AKUNG", "pangkalan": "BBS"}
+{" token" : "249", "nama": "AYAH BADAR", "pangkalan": "WDS"}
+{" token" : "049", "nama": "RYAN GODEG", "pangkalan": "FREELANCE"}
+{" token" : "445", "nama": "ACE", "pangkalan": "CRC 1"}
+{" token" : "873", "nama": "ZAKI", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "050", "nama": "ALI KB", "pangkalan": "AL FARUQ"}
+{" token" : "423", "nama": "HASAN (HASUN)", "pangkalan": "BDHAZ"}
+{" token" : "112", "nama": "JACK", "pangkalan": "JRC"}
+{" token" : "708", "nama": "NURAH", "pangkalan": "EXIST"}
+{" token" : "389", "nama": "MUHAIMIN (CHAMINK)", "pangkalan": "BDHAZ"}
+{" token" : "215", "nama": "HERI", "pangkalan": "OASIS"}
+{" token" : "171", "nama": "ASEP", "pangkalan": "SAVANA"}
+{" token" : "406", "nama": "DAMIRI JKT", "pangkalan": "FREELANCE"}
+{" token" : "580", "nama": "RAMA", "pangkalan": "NNC"}
+{" token" : "635", "nama": "ASEP HAMDAN", "pangkalan": "FREELANCE"}
+{" token" : "675", "nama": "IRFAN", "pangkalan": "ANAZMA"}
+{" token" : "655", "nama": "EGI", "pangkalan": "BBS"}
+{" token" : "217", "nama": "H CECEP", "pangkalan": "GAMAH"}
+{" token" : "239", "nama": "UCUT", "pangkalan": "CRC 1"}
+{" token" : "517", "nama": "CEPOT", "pangkalan": "PESONA ALAM"}
+{" token" : "442", "nama": "AKI OMPONG", "pangkalan": "MDR"}
+{" token" : "163", "nama": "JHON", "pangkalan": "SK"}
+{" token" : "1277", "nama": "FENDI AZIS", "pangkalan": "FREELANCE"}
+{" token" : "807", "nama": "CIWOK", "pangkalan": "WRC"}
+{" token" : "1005", "nama": "FAJAR", "pangkalan": "EXIST"}
+{" token" : "903", "nama": "AGUS ADIWIRYA", "pangkalan": "LF"}
+{" token" : "277", "nama": "IWAN", "pangkalan": "CRC 2"}
+{" token" : "500", "nama": "ACENG AJ GRUP", "pangkalan": "FREELANCE"}
+{" token" : "978", "nama": "BADEN", "pangkalan": "DESTROY"}
+{" token" : "511", "nama": "RIZAL", "pangkalan": "CRC 1"}
+{" token" : "226", "nama": "H DADANG MBM", "pangkalan": "FREELANCE"}
+{" token" : "982", "nama": "AGUS SALIM", "pangkalan": "KPCP REBORN"}
+{" token" : "098", "nama": "AHMAD RIAN", "pangkalan": "IPPA"}
+{" token" : "250", "nama": "KIKIM", "pangkalan": "BBS"}
+{" token" : "326", "nama": "SAIDI", "pangkalan": "GSPI"}
+{" token" : "017", "nama": "ANDRI POLO", "pangkalan": "CRC 1"}
+{" token" : "629", "nama": "H DANGDANG", "pangkalan": "PPGC"}
+{" token" : "659", "nama": "YANA", "pangkalan": "FREELANCE"}
+{" token" : "080", "nama": "FAWAZ", "pangkalan": "NNC"}
+{" token" : "858", "nama": "EDI", "pangkalan": "ADC"}
+{" token" : "168", "nama": "BOGEL", "pangkalan": "SAVANA"}
+{" token" : "151", "nama": "ANWAR", "pangkalan": "SAVANA"}
+{" token" : "559", "nama": "MUHIDIN SOLEMAN", "pangkalan": "BET ASPUR"}
+{" token" : "778", "nama": "H MUFI", "pangkalan": "ALAKEFEK"}
+{" token" : "165", "nama": "OPIK", "pangkalan": "SAVANA"}
+{" token" : "107", "nama": "ALI BOYA", "pangkalan": "JRC"}
+{" token" : "1055", "nama": "WINDU", "pangkalan": "ALMAWADA"}
+{" token" : "425", "nama": "ANDI", "pangkalan": "ALAKEFEK"}
+{" token" : "461", "nama": "BOYAN", "pangkalan": "OASIS"}
+{" token" : "207", "nama": "BALOY", "pangkalan": "TRIPLE S"}
+{" token" : "166", "nama": "MUSTOFA", "pangkalan": "SAVANA"}
+{" token" : "206", "nama": "ASEP JANDAN", "pangkalan": "PSDA"}
+{" token" : "1047", "nama": "TETEN", "pangkalan": "FREELANCE"}
+{" token" : "244", "nama": "HERI PANGSI", "pangkalan": "FREELANCE"}
+{" token" : "343", "nama": "ABENG", "pangkalan": "NIKREUH"}
+{" token" : "158", "nama": "CEPOT", "pangkalan": "JRC"}
+{" token" : "048", "nama": "DANI", "pangkalan": "EXIST"}
+{" token" : "750", "nama": "AZI", "pangkalan": "ARRAHIM"}
+{" token" : "258", "nama": "IPANK", "pangkalan": "PARTNER"}
+{" token" : "491", "nama": "BANG ALI", "pangkalan": "ALHALIJI"}
+{" token" : "291", "nama": "JAJAT", "pangkalan": "CRC 1"}
+{" token" : "1267", "nama": "IHSAN", "pangkalan": "DESTROY"}
+{" token" : "481", "nama": "USMAN KB", "pangkalan": "PPGC"}
+{" token" : "390", "nama": "JAHIN", "pangkalan": "ANAZMA"}
+{" token" : "728", "nama": "USMAN", "pangkalan": "FREELANCE"}
+{" token" : "520", "nama": "WAWA", "pangkalan": "WHIFER"}
+{" token" : "1155", "nama": "AMIN", "pangkalan": "FREELANCE"}
+{" token" : "196", "nama": "H DAI", "pangkalan": "PPGC"}
+{" token" : "344", "nama": "ILHAM", "pangkalan": "SK"}
+{" token" : "022", "nama": "SOFYAN", "pangkalan": "ALAKEFEK"}
+{" token" : "460", "nama": "ANDRI", "pangkalan": "CRC 2"}
+{" token" : "128", "nama": "H DODI", "pangkalan": "JRC"}
+{" token" : "293", "nama": "ARI", "pangkalan": "TRIPLE S"}
+{" token" : "587", "nama": "NURDIN", "pangkalan": "P3CB"}
+{" token" : "238", "nama": "PENDI", "pangkalan": "DESTROY"}
+{" token" : "872", "nama": "AYI SUJANA", "pangkalan": "HPI"}
+{" token" : "619", "nama": "BASIT KB", "pangkalan": "FREELANCE KB"}
+{" token" : "522", "nama": "BUDI ANDI", "pangkalan": "MANTRA"}
+{" token" : "1108", "nama": "IMAN CIMONG", "pangkalan": "WHIFER"}
+{" token" : "755", "nama": "ARUL JKT", "pangkalan": "FREELANCE"}
+{" token" : "1057", "nama": "RIDWAN", "pangkalan": "ANAZMA"}
+{" token" : "827", "nama": "IRFAN", "pangkalan": "FAMILY PONCORAN"}
+{" token" : "819", "nama": "MUMIN", "pangkalan": "MURSID AMANAH"}
+{" token" : "614", "nama": "CECE RUSLI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "335", "nama": "SURYA (BYOT)", "pangkalan": "BDHAZ"}
+{" token" : "156", "nama": "YAKUB", "pangkalan": "JDC"}
+{" token" : "053", "nama": "IWAN SEXI", "pangkalan": "FREELANCE"}
+{" token" : "068", "nama": "BABAY", "pangkalan": "NNC"}
+{" token" : "743", "nama": "EFUL", "pangkalan": "ALAKEFEK"}
+{" token" : "685", "nama": "ABDULLAH", "pangkalan": "H2GU"}
+{" token" : "562", "nama": "P UJANG", "pangkalan": "P2C"}
+{" token" : "690", "nama": "JUNAEDI", "pangkalan": "IPPA"}
+{" token" : "531", "nama": "RUDI", "pangkalan": "ALAKEFEK"}
+{" token" : "988", "nama": "BAHRUM", "pangkalan": "HABIBI FAMILY"}
+{" token" : "730", "nama": "DEDE", "pangkalan": "BGC"}
+{" token" : "476", "nama": "OBUN", "pangkalan": "MDR"}
+{" token" : "551", "nama": "MIFTAH", "pangkalan": "ASR"}
+{" token" : "416", "nama": "H ENAS", "pangkalan": "P3CB"}
+{" token" : "646", "nama": "KASTARI", "pangkalan": "FMID"}
+{" token" : "625", "nama": "ALAN", "pangkalan": "ALAKEFEK"}
+{" token" : "608", "nama": "P DEDE JUNAEDI", "pangkalan": "ALMAWADA"}
+{" token" : "133", "nama": "BAKRI", "pangkalan": "JRC"}
+{" token" : "1109", "nama": "SULAEMAN", "pangkalan": "BBS"}
+{" token" : "593", "nama": "ARIF", "pangkalan": "4G"}
+{" token" : "488", "nama": "ACEP", "pangkalan": "JABAL AHDAR"}
+{" token" : "823", "nama": "JAENUDIN", "pangkalan": "WDS"}
+{" token" : "691", "nama": "P USMAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "169", "nama": "RISMANA", "pangkalan": "SAVANA"}
+{" token" : "739", "nama": "SODIKIN BREBES ATTOYIBIN", "pangkalan": "FREELANCE"}
+{" token" : "863", "nama": "INDRA", "pangkalan": "SEKTOR C"}
+{" token" : "295", "nama": "H YUSUF", "pangkalan": "SK"}
+{" token" : "502", "nama": "DEDI ZIDAN", "pangkalan": "MANTRA"}
+{" token" : "657", "nama": "NISBAH", "pangkalan": "FREELANCE"}
+{" token" : "216", "nama": "H BUDI", "pangkalan": "HPI"}
+{" token" : "1033", "nama": "IRFAN MAULANA", "pangkalan": "ASR"}
+{" token" : "917", "nama": "H SAMULI", "pangkalan": "KGWM"}
+{" token" : "NON MEMBER", "nama": "NON MEMBER", "pangkalan": "-"}
+{" token" : "076", "nama": "ISKANDAR (DOYOK)", "pangkalan": "BDHAZ"}
+{" token" : "1201", "nama": "**KAKA", "pangkalan": "SAVANA"}
+{" token" : "524", "nama": "AHMAD ARSIL", "pangkalan": "FAMILY"}
+{" token" : "976", "nama": "LUKMAN", "pangkalan": "SDS"}
+{" token" : "542", "nama": "BUDI BHUTONG", "pangkalan": "MDR"}
+{" token" : "345", "nama": "WAHYU", "pangkalan": "AL FARUQ"}
+{" token" : "1036", "nama": "AYONG", "pangkalan": "DESTROY"}
+{" token" : "1312", "nama": "IPANG", "pangkalan": "AL BANTANI"}
+{" token" : "661", "nama": "ASEP AZAM KB", "pangkalan": "FREELANCE KB"}
+{" token" : "040", "nama": "ASEP LUKMAN HAKIM", "pangkalan": "EXIST"}
+{" token" : "771", "nama": "ARDI (CHAINK)", "pangkalan": "BDHAZ"}
+{" token" : "334", "nama": "FATAH", "pangkalan": "ASR"}
+{" token" : "926", "nama": "HAMZAH JENAL", "pangkalan": "CRC 1"}
+{" token" : "074", "nama": "DADI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "419", "nama": "P AHMAD KB", "pangkalan": "FREELANCE KB"}
+{" token" : "463", "nama": "H MULYADI", "pangkalan": "FAMILY"}
+{" token" : "1042", "nama": "RIZKI RAMADHAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "1161", "nama": "DESAM", "pangkalan": "FREELANCE"}
+{" token" : "294", "nama": "WANDI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "803", "nama": "DENI ABLEH PASGA", "pangkalan": "FREELANCE"}
+{" token" : "1129", "nama": "ARMAN", "pangkalan": "FREELANCE"}
+{" token" : "1077", "nama": "YADI MULYADI", "pangkalan": "KGWM"}
+{" token" : "594", "nama": "DEDI OSTAD", "pangkalan": "KOMPAK"}
+{" token" : "188", "nama": "SOFYAN", "pangkalan": "ADC"}
+{" token" : "023", "nama": "AYI SAMSUDIN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "514", "nama": "MUJAHID", "pangkalan": "ALAKEFEK"}
+{" token" : "1084", "nama": "P GURU", "pangkalan": "BDHAZ"}
+{" token" : "1035", "nama": "SADUL", "pangkalan": "BEDOG LOCOT"}
+{" token" : "405", "nama": "YUSEF", "pangkalan": "ANAZMA"}
+{" token" : "645", "nama": "HAMDAN", "pangkalan": "SDS"}
+{" token" : "421", "nama": "P JAJANG KB", "pangkalan": "PPGC"}
+{" token" : "1128", "nama": "AZIS", "pangkalan": "PESONA ALAM"}
+{" token" : "609", "nama": "ZIDAN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "466", "nama": "DENI", "pangkalan": "FREELANCE"}
+{" token" : "119", "nama": "CAMOY", "pangkalan": "JRC"}
+{" token" : "763", "nama": "AGIL KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1056", "nama": "SUGIONO", "pangkalan": "GHIBET"}
+{" token" : "203", "nama": "FIKRI", "pangkalan": "CRC 2"}
+{" token" : "020", "nama": "ASEP ALAM", "pangkalan": "PPGC"}
+{" token" : "270", "nama": "KUMIN", "pangkalan": "CRC 1"}
+{" token" : "934", "nama": "ACUY", "pangkalan": "SDS"}
+{" token" : "1142", "nama": "HAMDANI", "pangkalan": "TRIPLE S"}
+{" token" : "508", "nama": "ASEP JUNAEDI", "pangkalan": "LF"}
+{" token" : "183", "nama": "HASAN", "pangkalan": "MDR"}
+{" token" : "1193", "nama": "MUMUH", "pangkalan": "BET ASPUR"}
+{" token" : "616", "nama": "RIDWAN", "pangkalan": "SK"}
+{" token" : "717", "nama": "UJANG SUHERDI", "pangkalan": "NNC"}
+{" token" : "790", "nama": "TORUS JKT", "pangkalan": "FREELANCE"}
+{" token" : "245", "nama": "KENTUNG", "pangkalan": "SEKTOR C"}
+{" token" : "387", "nama": "HENDI", "pangkalan": "AL BANTANI"}
+{" token" : "1208", "nama": "ZAHRA AZIS", "pangkalan": "FREELANCE"}
+{" token" : "142", "nama": "H ALI", "pangkalan": "IPPA"}
+{" token" : "1170", "nama": "ZAKI", "pangkalan": "CRC 1"}
+{" token" : "825", "nama": "AGUNG", "pangkalan": "FREELANCE"}
+{" token" : "538", "nama": "BUDI ZIDAN", "pangkalan": "MANTRA"}
+{" token" : "912", "nama": "FAHRI", "pangkalan": "BBS"}
+{" token" : "874", "nama": "ASEP", "pangkalan": "NEWSTAR"}
+{" token" : "325", "nama": "DADAN", "pangkalan": "FAMILY"}
+{" token" : "513", "nama": "MOCLIS", "pangkalan": "BDC"}
+{" token" : "477", "nama": "JAJAT", "pangkalan": "ADC"}
+{" token" : "770", "nama": "JAFAR", "pangkalan": "ALAKEFEK"}
+{" token" : "160", "nama": "ABDULLAH MALIK JKT", "pangkalan": "FREELANCE"}
+{" token" : "430", "nama": "JAFAR", "pangkalan": "BMG"}
+{" token" : "362", "nama": "OBENG", "pangkalan": "4G"}
+{" token" : "451", "nama": "ALVIN", "pangkalan": "FYP"}
+{" token" : "611", "nama": "RIDWAN", "pangkalan": "DESTROY"}
+{" token" : "788", "nama": "SOFYAN HARIRI", "pangkalan": "OASIS"}
+{" token" : "283", "nama": "UJANG JAJAT KB", "pangkalan": "FREELANCE KB"}
+{" token" : "883", "nama": "RIKI", "pangkalan": "PESONA ALAM"}
+{" token" : "282", "nama": "MIGON", "pangkalan": "PESONA ALAM"}
+{" token" : "143", "nama": "IHSAN", "pangkalan": "IPPA"}
+{" token" : "649", "nama": "MADA", "pangkalan": "JDC"}
+{" token" : "622", "nama": "YUSUF SAFIRAH", "pangkalan": "BGC"}
+{" token" : "418", "nama": "ERWIN", "pangkalan": "4G"}
+{" token" : "945", "nama": "ERWIN", "pangkalan": "SHK"}
+{" token" : "1143", "nama": "AKIM PERMANA", "pangkalan": "PPGC"}
+{" token" : "1107", "nama": "ABUDIN", "pangkalan": "ALAKEFEK"}
+{" token" : "631", "nama": "H FARID", "pangkalan": "SAVANA"}
+{" token" : "762", "nama": "SAGAL", "pangkalan": "AL FARUQ"}
+{" token" : "534", "nama": "H MARWAN", "pangkalan": "PPGC"}
+{" token" : "464", "nama": "HERMANSYAH", "pangkalan": "ANAZMA"}
+{" token" : "688", "nama": "RAYAN", "pangkalan": "BET ASPUR"}
+{" token" : "459", "nama": "RUSDI", "pangkalan": "JDC"}
+{" token" : "1272", "nama": "HAYATI", "pangkalan": "IPPA"}
+{" token" : "759", "nama": "YUDI AHOK", "pangkalan": "BGC"}
+{" token" : "189", "nama": "MAS HERU NGF", "pangkalan": "FREELANCE"}
+{" token" : "1221", "nama": "CEPIH", "pangkalan": "RANTAU"}
+{" token" : "628", "nama": "DEDE BEDOG", "pangkalan": "CRC 1"}
+{" token" : "456", "nama": "DANI", "pangkalan": "ARRAHIM"}
+{" token" : "652", "nama": "FERI", "pangkalan": "X ONE"}
+{" token" : "027", "nama": "UDEN SAEFULOH (UCINK)", "pangkalan": "BDHAZ"}
+{" token" : "1091", "nama": "AMEL", "pangkalan": "BGC"}
+{" token" : "408", "nama": "A ALWI KB", "pangkalan": "MDR"}
+{" token" : "1009", "nama": "KIKI", "pangkalan": "GUNUNG JATI"}
+{" token" : "269", "nama": "H YUNUS", "pangkalan": "SEKTOR C"}
+{" token" : "407", "nama": "INDRA", "pangkalan": "JRC"}
+{" token" : "822", "nama": "ABU SANAB", "pangkalan": "PPGC"}
+{" token" : "337", "nama": "DUDI", "pangkalan": "RANTAU"}
+{" token" : "718", "nama": "JENAL", "pangkalan": "JDC"}
+{" token" : "373", "nama": "YADI TEMPE", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "516", "nama": "BENDOT", "pangkalan": "AL FARUQ"}
+{" token" : "521", "nama": "H ASEP", "pangkalan": "ARRAHIM"}
+{" token" : "032", "nama": "IPIN", "pangkalan": "EXIST"}
+{" token" : "302", "nama": "FAISAL", "pangkalan": "JABAL AHDAR"}
+{" token" : "197", "nama": "WAWAN ABU ZAKI", "pangkalan": "FMID"}
+{" token" : "366", "nama": "P AAL", "pangkalan": "KOMPAK"}
+{" token" : "671", "nama": "IYUK", "pangkalan": "CRC 2"}
+{" token" : "410", "nama": "NURIL GUNUNG JATI", "pangkalan": "GUNUNG JATI"}
+{" token" : "1158", "nama": "AZIS JOGJA", "pangkalan": "FREELANCE"}
+{" token" : "360", "nama": "ILONG", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "777", "nama": "ALI", "pangkalan": "CRC 1"}
+{" token" : "606", "nama": "P GUGUN", "pangkalan": "FREELANCE"}
+{" token" : "648", "nama": "DANDAN", "pangkalan": "GSPI"}
+{" token" : "744", "nama": "HARUN", "pangkalan": "ASR"}
+{" token" : "436", "nama": "OKTA", "pangkalan": "H2GU"}
+{" token" : "1152", "nama": "YUSUF", "pangkalan": "BLOK M"}
+{" token" : "471", "nama": "JHON RIA", "pangkalan": "BDHAZ"}
+{" token" : "1339", "nama": "UNGKAP SIAHAN", "pangkalan": "SURKEN"}
+{" token" : "852", "nama": "RAHMAT", "pangkalan": "CRC 2"}
+{" token" : "700", "nama": "GERI", "pangkalan": "BEDOG LOCOT"}
+{" token" : "605", "nama": "BANI", "pangkalan": "ASR"}
+{" token" : "402", "nama": "OBAY PANGRANGO", "pangkalan": "FREELANCE"}
+{" token" : "890", "nama": "FAJAR", "pangkalan": "CRC 2"}
+{" token" : "916", "nama": "RAHMAT", "pangkalan": "NNC"}
+{" token" : "695", "nama": "IKMAL", "pangkalan": "H2GU"}
+{" token" : "1131", "nama": "AGUS SURYANA", "pangkalan": "LF"}
+{" token" : "694", "nama": "SAEFUL ROHMAN", "pangkalan": "SAHL TOUR"}
+{" token" : "627", "nama": "SADAM", "pangkalan": "JDC"}
+{" token" : "443", "nama": "P ABDULLAH APV JKT", "pangkalan": "FREELANCE"}
+{" token" : "1138", "nama": "ANDRI", "pangkalan": "JABAL AHDAR"}
+{" token" : "752", "nama": "ANWAR", "pangkalan": "IGP"}
+{" token" : "292", "nama": "ACEP UGIH", "pangkalan": "HABIBI FAMILY"}
+{" token" : "975", "nama": "DADAN", "pangkalan": "CRC 2"}
+{" token" : "1065", "nama": "FERI", "pangkalan": "SDS"}
+{" token" : "557", "nama": "NANANG SULE", "pangkalan": "JABAL AHDAR"}
+{" token" : "099", "nama": "AHMAD ASIKIN", "pangkalan": "IPPA"}
+{" token" : "058", "nama": "P ANDRI", "pangkalan": "JDC"}
+{" token" : "839", "nama": "H WAWAN", "pangkalan": "BDC"}
+{" token" : "598", "nama": "IRFAN", "pangkalan": "IGP"}
+{" token" : "537", "nama": "HAKIM", "pangkalan": "FMID"}
+{" token" : "340", "nama": "NAFIS", "pangkalan": "ALHALIJI"}
+{" token" : "1144", "nama": "HENDRA GUNAWAN", "pangkalan": "ANAZMA"}
+{" token" : "304", "nama": "LUTHPI", "pangkalan": "ALHALIJI"}
+{" token" : "869", "nama": "ANWAR", "pangkalan": "IPPA"}
+{" token" : "002", "nama": "MENEL", "pangkalan": "JDC"}
+{" token" : "435", "nama": "P KASIMIN JKT", "pangkalan": "FREELANCE"}
+{" token" : "624", "nama": "MUSALEH", "pangkalan": "BLOK M"}
+{" token" : "583", "nama": "P HUSIN", "pangkalan": "MURSID AMANAH"}
+{" token" : "989", "nama": "H AHMAD", "pangkalan": "SDS"}
+{" token" : "1341", "nama": "HIDAYAT", "pangkalan": "FREELANCE"}
+{" token" : "391", "nama": "TEGUH", "pangkalan": "BBS"}
+{" token" : "1251", "nama": "PANJI", "pangkalan": "FREELANCE"}
+{" token" : "1174", "nama": "ADEN", "pangkalan": "SEKTOR C"}
+{" token" : "060", "nama": "AYUB", "pangkalan": "SK"}
+{" token" : "676", "nama": "DODI", "pangkalan": "P2C"}
+{" token" : "327", "nama": "IYANG AMBON", "pangkalan": "SEKTOR C"}
+{" token" : "835", "nama": "USEP", "pangkalan": "SEKTOR C"}
+{" token" : "720", "nama": "H DODOL", "pangkalan": "ADC"}
+{" token" : "1069", "nama": "ELANG", "pangkalan": "BLOK M"}
+{" token" : "864", "nama": "HAMZAH PANTAU", "pangkalan": "BEDOG LOCOT"}
+{" token" : "970", "nama": "RIDWAN", "pangkalan": "ALAKEFEK"}
+{" token" : "991", "nama": "DENI", "pangkalan": "PESONA ALAM"}
+{" token" : "1014", "nama": "ALFIN", "pangkalan": "SK"}
+{" token" : "621", "nama": "ATEP", "pangkalan": "ARAHMAH"}
+{" token" : "1197", "nama": "SUKRON", "pangkalan": "EXIST"}
+{" token" : "1048", "nama": "IWAN", "pangkalan": "ALAKEFEK"}
+{" token" : "125", "nama": "ARIF SURYA", "pangkalan": "JRC"}
+{" token" : "1261", "nama": "FATAH", "pangkalan": "SAVANA"}
+{" token" : "972", "nama": "H AGUS", "pangkalan": "SDS"}
+{" token" : "088", "nama": "MUHAMAD EDY JKT", "pangkalan": "FREELANCE"}
+{" token" : "701", "nama": "DIAN", "pangkalan": "FAMILY"}
+{" token" : "401", "nama": "MIFTAH", "pangkalan": "FMID"}
+{" token" : "322", "nama": "IDIS/RIDWAN", "pangkalan": "ADC"}
+{" token" : "674", "nama": "SAKIB JKT", "pangkalan": "FREELANCE"}
+{" token" : "668", "nama": "AGUS UKONG", "pangkalan": "DESTROY"}
+{" token" : "980", "nama": "HARUN", "pangkalan": "LF"}
+{" token" : "550", "nama": "DANI (DONAL)", "pangkalan": "BDHAZ"}
+{" token" : "523", "nama": "ABU FAISAL", "pangkalan": "ARRAHIM"}
+{" token" : "879", "nama": "AYUB", "pangkalan": "CRC 1"}
+{" token" : "1150", "nama": "ADE", "pangkalan": "SAVANA"}
+{" token" : "122", "nama": "ARDI", "pangkalan": "JRC"}
+{" token" : "369", "nama": "ASEP NYENTRIK", "pangkalan": "FREELANCE"}
+{" token" : "846", "nama": "SOLIHIN", "pangkalan": "BGC"}
+{" token" : "601", "nama": "FAISL SYAMLAN", "pangkalan": "FREELANCE"}
+{" token" : "1012", "nama": "SALEH ZIMAH", "pangkalan": "ALHALIJI"}
+{" token" : "1286", "nama": "SADUY", "pangkalan": "IGP"}
+{" token" : "902", "nama": "ARI", "pangkalan": "KOMPAK"}
+{" token" : "1218", "nama": "DIDI", "pangkalan": "BMG"}
+{" token" : "995", "nama": "AMIN", "pangkalan": "SDS"}
+{" token" : "687", "nama": "UWENG", "pangkalan": "ASR"}
+{" token" : "707", "nama": "AIMAN", "pangkalan": "SDS"}
+{" token" : "604", "nama": "MAULANA NASIR", "pangkalan": "ASR"}
+{" token" : "097", "nama": "BUDIYANA", "pangkalan": "IPPA"}
+{" token" : "1095", "nama": "DANI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1082", "nama": "REZA JKT", "pangkalan": "FREELANCE"}
+{" token" : "922", "nama": "SOBIRIN", "pangkalan": "OASIS"}
+{" token" : "333", "nama": "RUSTANDI", "pangkalan": "GSPI"}
+{" token" : "470", "nama": "ACUT", "pangkalan": "KGWM"}
+{" token" : "736", "nama": "DANTO", "pangkalan": "AL FARUQ"}
+{" token" : "316", "nama": "SOFYAN", "pangkalan": "BBS"}
+{" token" : "221", "nama": "FAJAR", "pangkalan": "BMG"}
+{" token" : "956", "nama": "ROY", "pangkalan": "FREELANCE"}
+{" token" : "1181", "nama": "ASEP", "pangkalan": "DESTROY"}
+{" token" : "857", "nama": "ABU MUHAMMAD", "pangkalan": "HPI"}
+{" token" : "504", "nama": "HILMAN", "pangkalan": "FREELANCE"}
+{" token" : "716", "nama": "UNANG", "pangkalan": "CRC 2"}
+{" token" : "1209", "nama": "AZIS", "pangkalan": "BBS"}
+{" token" : "1113", "nama": "HERMAN KB", "pangkalan": "MDR"}
+{" token" : "786", "nama": "H LEBON", "pangkalan": "ADC"}
+{" token" : "571", "nama": "IPEY KB", "pangkalan": "FAMILY PONCORAN"}
+{" token" : "1112", "nama": "BAGAS", "pangkalan": "BBS"}
+{" token" : "689", "nama": "H YUSUF TAMAM TOUR", "pangkalan": "FREELANCE"}
+{" token" : "234", "nama": "NURDIN AFGANDI", "pangkalan": "P2C"}
+{" token" : "1207", "nama": "RANI CIBEREUM", "pangkalan": "FREELANCE"}
+{" token" : "409", "nama": "CEPIH", "pangkalan": "KGWM"}
+{" token" : "942", "nama": "JIMMI", "pangkalan": "FREELANCE"}
+{" token" : "660", "nama": "M YAKUB ", "pangkalan": "HABIBI FAMILY"}
+{" token" : "697", "nama": "IWAN", "pangkalan": "ARAHMAH"}
+{" token" : "818", "nama": "FERI", "pangkalan": "CRC 2"}
+{" token" : "658", "nama": "INDRA LESMANA", "pangkalan": "P2C"}
+{" token" : "1232", "nama": "NANA", "pangkalan": "EXIST"}
+{" token" : "693", "nama": "SANDI", "pangkalan": "CRC 2"}
+{" token" : "1162", "nama": "YUSUF", "pangkalan": "ASR"}
+{" token" : "478", "nama": "P ANDI", "pangkalan": "KOMPAK"}
+{" token" : "1000", "nama": "SOBIRIN", "pangkalan": "GAMAH"}
+{" token" : "1146", "nama": "JENAL", "pangkalan": "SAVANA"}
+{" token" : "783", "nama": "PEPEN", "pangkalan": "ASR"}
+{" token" : "199", "nama": "SYARIF", "pangkalan": "GAMAH"}
+{" token" : "1025", "nama": "TISON", "pangkalan": "MDR"}
+{" token" : "307", "nama": "AGUS PANTAU NEW", "pangkalan": "FREELANCE"}
+{" token" : "800", "nama": "MEIDI", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1016", "nama": "P IPING", "pangkalan": "BDHAZ"}
+{" token" : "1264", "nama": "DUDI KURNIAWAN", "pangkalan": "IGP"}
+{" token" : "968", "nama": "RIDWAN", "pangkalan": "X ONE"}
+{" token" : "1041", "nama": "YEDI AL HASAN", "pangkalan": "FREELANCE"}
+{" token" : "712", "nama": "IJAM", "pangkalan": "WHIFER"}
+{" token" : "999", "nama": "JUNTAK JKT", "pangkalan": "SHK"}
+{" token" : "018", "nama": "DEDE SAID", "pangkalan": "PESONA ALAM"}
+{" token" : "969", "nama": "HELMI", "pangkalan": "BET ASPUR"}
+{" token" : "161", "nama": "SOPIAN JOCRONG", "pangkalan": "FREELANCE"}
+{" token" : "702", "nama": "MAHMUD", "pangkalan": "FREELANCE"}
+{" token" : "905", "nama": "RYAN", "pangkalan": "LF"}
+{" token" : "091", "nama": "ULE", "pangkalan": "CRC 1"}
+{" token" : "308", "nama": "ROHMAN", "pangkalan": "NEWSTAR"}
+{" token" : "1289", "nama": "DANI", "pangkalan": "TR FAMILY"}
+{" token" : "862", "nama": "ENDANG", "pangkalan": "BBS"}
+{" token" : "965", "nama": "CASWADI", "pangkalan": "ALAKEFEK"}
+{" token" : "738", "nama": "EDWIN", "pangkalan": "SAHL TOUR"}
+{" token" : "1096", "nama": "HENDI", "pangkalan": "NIKREUH"}
+{" token" : "855", "nama": "P OLEH", "pangkalan": "FREELANCE"}
+{" token" : "773", "nama": "DIAN", "pangkalan": "CRC 1"}
+{" token" : "261", "nama": "BAMEH", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "666", "nama": "H ERI OREN", "pangkalan": "P2C"}
+{" token" : "885", "nama": "CECEP", "pangkalan": "RANTAU"}
+{" token" : "272", "nama": "RUSDI", "pangkalan": "AL BANTANI"}
+{" token" : "753", "nama": "HERI", "pangkalan": "CRC 1"}
+{" token" : "867", "nama": "AI SAEFUDIN", "pangkalan": "ANAZMA"}
+{" token" : "791", "nama": "RONI GARASI", "pangkalan": "FREELANCE"}
+{" token" : "093", "nama": "SENDI", "pangkalan": "IPPA"}
+{" token" : "603", "nama": "P DIDIN", "pangkalan": "RANTAU"}
+{" token" : "641", "nama": "TONI", "pangkalan": "BEDOG LOCOT"}
+{" token" : "856", "nama": "FAJRI MURSID ALARAB", "pangkalan": "FREELANCE"}
+{" token" : "808", "nama": "DIAN", "pangkalan": "AL FARUQ"}
+{" token" : "346", "nama": "IBAH", "pangkalan": "ADC"}
+{" token" : "495", "nama": "IBING", "pangkalan": "FAMILY"}
+{" token" : "796", "nama": "RIDWAN ONE KB", "pangkalan": "FREELANCE KB"}
+{" token" : "243", "nama": "WAHYU JCO", "pangkalan": "FREELANCE"}
+{" token" : "726", "nama": "TANTAN", "pangkalan": "DESTROY"}
+{" token" : "1097", "nama": "MAULANA", "pangkalan": "ARAHMAH"}
+{" token" : "004", "nama": "AEF", "pangkalan": "BGC"}
+{" token" : "1119", "nama": "FAISAL", "pangkalan": "TR FAMILY"}
+{" token" : "468", "nama": "AMIR", "pangkalan": "TR FAMILY"}
+{" token" : "251", "nama": "H RUSDI", "pangkalan": "ARRAHIM"}
+{" token" : "1090", "nama": "DANU", "pangkalan": "CRC 1"}
+{" token" : "1140", "nama": "YOGA", "pangkalan": "FREELANCE"}
+{" token" : "1105", "nama": "BLEK", "pangkalan": "EXIST"}
+{" token" : "699", "nama": "FIRMAN", "pangkalan": "FAMILY"}
+{" token" : "747", "nama": "HAIKAL", "pangkalan": "4G"}
+{" token" : "310", "nama": "HENDRA", "pangkalan": "JABAL AHDAR"}
+{" token" : "388", "nama": "ARUL", "pangkalan": "AL BANTANI"}
+{" token" : "106", "nama": "DODI MORISON", "pangkalan": "JRC"}
+{" token" : "090", "nama": "IRWAN", "pangkalan": "HALLA INDONESIA"}
+{" token" : "962", "nama": "MUHAMMAD JKT", "pangkalan": "FREELANCE"}
+{" token" : "313", "nama": "DEDE NURYAMAN", "pangkalan": "SGA"}
+{" token" : "810", "nama": "OKIM", "pangkalan": "CRC 2"}
+{" token" : "301", "nama": "JENAL", "pangkalan": "GSPI"}
+{" token" : "256", "nama": "ABDUL AZIS", "pangkalan": "SK"}
+{" token" : "118", "nama": "ARI", "pangkalan": "JRC"}
+{" token" : "1180", "nama": "CIMONG", "pangkalan": "CRC 1"}
+{" token" : "1172", "nama": "BEBEN", "pangkalan": "FREELANCE"}
+{" token" : "678", "nama": "EDI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1159", "nama": "H ASEP", "pangkalan": "SDS"}
+{" token" : "248", "nama": "FERI", "pangkalan": "IPPA"}
+{" token" : "489", "nama": "P UJANG", "pangkalan": "SAHL TOUR"}
+{" token" : "278", "nama": "ANSHAR", "pangkalan": "ALAKEFEK"}
+{" token" : "974", "nama": "DEDI JKT", "pangkalan": "FREELANCE"}
+{" token" : "1124", "nama": "FAHREZI", "pangkalan": "OASIS"}
+{" token" : "591", "nama": "KADAR AHYANI", "pangkalan": "FMID"}
+{" token" : "884", "nama": "RAMADHAN", "pangkalan": "MURSID AMANAH"}
+{" token" : "615", "nama": "IKBAL", "pangkalan": "OASIS"}
+{" token" : "356", "nama": "MUMUH", "pangkalan": "PPGC"}
+{" token" : "1185", "nama": "ANDI", "pangkalan": "IGP"}
+{" token" : "1013", "nama": "FAISAL", "pangkalan": "IPPA"}
+{" token" : "729", "nama": "FAKHRI", "pangkalan": "TR FAMILY"}
+{" token" : "826", "nama": "KINOY", "pangkalan": "X ONE"}
+{" token" : "1247", "nama": "SULAEMAN", "pangkalan": "ALMAWADA"}
+{" token" : "1115", "nama": "NANANG", "pangkalan": "WDS"}
+{" token" : "1081", "nama": "DANI", "pangkalan": "MDR"}
+{" token" : "1196", "nama": "RISMAN", "pangkalan": "BBS"}
+{" token" : "1194", "nama": "WAHID", "pangkalan": "FREELANCE"}
+{" token" : "079", "nama": "ANGGA", "pangkalan": "NNC"}
+{" token" : "102", "nama": "BERNAT", "pangkalan": "JRC"}
+{" token" : "918", "nama": "BOB", "pangkalan": "AL FARUQ"}
+{" token" : "951", "nama": "TARI", "pangkalan": "FREELANCE"}
+{" token" : "985", "nama": "FATUR RAHMAN", "pangkalan": "GUNUNG JATI"}
+{" token" : "623", "nama": "KINOY CHAPEP", "pangkalan": "FYP"}
+{" token" : "939", "nama": "RAGIS", "pangkalan": "OASIS"}
+{" token" : "1101", "nama": "TAUFIK PESONA", "pangkalan": "FREELANCE"}
+{" token" : "056", "nama": "ARIF", "pangkalan": "ALAKEFEK"}
+{" token" : "1300", "nama": "JENAL", "pangkalan": "FAMILY"}
+{" token" : "497", "nama": "ASEP ALPIN", "pangkalan": "OASIS"}
+{" token" : "1176", "nama": "ENDAR", "pangkalan": "BMG"}
+{" token" : "1269", "nama": "KUBIL IP2B", "pangkalan": "FREELANCE"}
+{" token" : "1099", "nama": "SUHENDI", "pangkalan": "KGWM"}
+{" token" : "801", "nama": "SALEH", "pangkalan": "BGC"}
+{" token" : "1063", "nama": "ABDUL LATIEF", "pangkalan": "ALAKEFEK"}
+{" token" : "575", "nama": "USMAN", "pangkalan": "ALMAWADA"}
+{" token" : "566", "nama": "AGOY", "pangkalan": "CRC 2"}
+{" token" : "963", "nama": "SARIFAH", "pangkalan": "ALHALIJI"}
+{" token" : "733", "nama": "BUNDA AMIRA KB", "pangkalan": "FREELANCE KB"}
+{" token" : "845", "nama": "BAMBANG", "pangkalan": "BBS"}
+{" token" : "1046", "nama": "FIRMAN", "pangkalan": "KOMPAK"}
+{" token" : "636", "nama": "DEDE SUPRIADI", "pangkalan": "OASIS"}
+{" token" : "742", "nama": "KOSIM", "pangkalan": "BEDOG LOCOT"}
+{" token" : "275", "nama": "NUR", "pangkalan": "PSDA"}
+{" token" : "1045", "nama": "DASEP", "pangkalan": "DESTROY"}
+{" token" : "1259", "nama": "OMEN DOP", "pangkalan": "FREELANCE"}
+{" token" : "817", "nama": "YUSUF", "pangkalan": "NEWSTAR"}
+{" token" : "1064", "nama": "UBIS", "pangkalan": "WRC"}
+{" token" : "1217", "nama": "BERI", "pangkalan": "BBS"}
+{" token" : "828", "nama": "DUDU", "pangkalan": "FREELANCE"}
+{" token" : "529", "nama": "SAHID", "pangkalan": "SDS"}
+{" token" : "1287", "nama": "IYAN", "pangkalan": "SAHL TOUR"}
+{" token" : "082", "nama": "JAENUDIN", "pangkalan": "AL FARUQ"}
+{" token" : "1018", "nama": "DEDE MR", "pangkalan": "BDC"}
+{" token" : "061", "nama": "BALQIS", "pangkalan": "EXIST"}
+{" token" : "200", "nama": "DAHLAN", "pangkalan": "SAHL TOUR"}
+{" token" : "1309", "nama": "DAYAT", "pangkalan": "SGA"}
+{" token" : "490", "nama": "IMAM JKT", "pangkalan": "FREELANCE"}
+{" token" : "1291", "nama": "RIAN", "pangkalan": "SK"}
+{" token" : "069", "nama": "AGUNG", "pangkalan": "NNC"}
+{" token" : "055", "nama": "MUSTAKIM", "pangkalan": "JABAL AHDAR"}
+{" token" : "776", "nama": "ABU FARIS", "pangkalan": "GAF"}
+{" token" : "897", "nama": "BEBEK", "pangkalan": "CRC 1"}
+{" token" : "450", "nama": "DEDE", "pangkalan": "FAMILY"}
+{" token" : "785", "nama": "ERWIN", "pangkalan": "EXIST"}
+{" token" : "1362", "nama": "TOHA", "pangkalan": "FREELANCE"}
+{" token" : "1168", "nama": "SAPON", "pangkalan": "BGC"}
+{" token" : "1070", "nama": "BAPA RANGKAS", "pangkalan": "FREELANCE"}
+{" token" : "386", "nama": "HUSNI", "pangkalan": "LF"}
+{" token" : "548", "nama": "IGO", "pangkalan": "JDC"}
+{" token" : "429", "nama": "LIA JKT", "pangkalan": "FREELANCE"}
+{" token" : "437", "nama": "ABDUL GONI", "pangkalan": "KGWM"}
+{" token" : "1177", "nama": "ACENG", "pangkalan": "FMID"}
+{" token" : "1059", "nama": "IYAN ILENG", "pangkalan": "BDC"}
+{" token" : "1331", "nama": "VICKI", "pangkalan": "SEKTOR C"}
+{" token" : "1308", "nama": "KOHAR", "pangkalan": "FMID"}
+{" token" : "637", "nama": "ADE SINAR ALAM", "pangkalan": "SINAR ALAM"}
+{" token" : "1151", "nama": "RASYA", "pangkalan": "GHIBET"}
+{" token" : "1049", "nama": "AEF", "pangkalan": "ALAKEFEK"}
+{" token" : "954", "nama": "INDRA", "pangkalan": "ALAKEFEK"}
+{" token" : "1104", "nama": "WALUH", "pangkalan": "OASIS"}
+{" token" : "751", "nama": "H ASEP", "pangkalan": "FMID"}
+{" token" : "1355", "nama": "HERMAWAN", "pangkalan": "LF"}
+{" token" : "1400", "nama": "IRWAN", "pangkalan": "LF"}
+{" token" : "1329", "nama": "M SANUSI", "pangkalan": "MDR"}
+{" token" : "977", "nama": "ZAENI", "pangkalan": "BGC"}
+{" token" : "1230", "nama": "JHON JKT", "pangkalan": "FREELANCE"}
+{" token" : "1378", "nama": "TOYIB", "pangkalan": "ALAKEFEK"}
+{" token" : "638", "nama": "OTOY", "pangkalan": "TRIPLE S"}
+{" token" : "1061", "nama": "ATEP", "pangkalan": "ANAZMA"}
+{" token" : "1365", "nama": "DEDI", "pangkalan": "FREELANCE"}
+{" token" : "626", "nama": "H AFANDI", "pangkalan": "AL FARUQ"}
+{" token" : "170", "nama": "MAUL", "pangkalan": "FYP"}
+{" token" : "844", "nama": "NURDIN", "pangkalan": "SK"}
+{" token" : "1222", "nama": "INDRA", "pangkalan": "ALMAWADA"}
+{" token" : "745", "nama": "DIDIH", "pangkalan": "CRC 2"}
+{" token" : "1393", "nama": "BEMBI", "pangkalan": "H2GU"}
+{" token" : "953", "nama": "HABIB BAGIR", "pangkalan": "4G"}
+{" token" : "909", "nama": "IKBAL FAUZI", "pangkalan": "HALLA INDONESIA"}
+{" token" : "457", "nama": "UCOX", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1358", "nama": "ALI JKT 2018", "pangkalan": "FREELANCE"}
+{" token" : "427", "nama": "PAKO", "pangkalan": "JRC"}
+{" token" : "021", "nama": "NANANG NEGLASARI", "pangkalan": "FREELANCE"}
+{" token" : "544", "nama": "AHMAD HIDAYAT", "pangkalan": "IPPA"}
+{" token" : "1074", "nama": "BUDIMAN", "pangkalan": "TR FAMILY"}
+{" token" : "558", "nama": "DAYAT", "pangkalan": "PARTNER"}
+{" token" : "933", "nama": "HENDAR", "pangkalan": "BBS"}
+{" token" : "1292", "nama": "ABDULLAH", "pangkalan": "HPI"}
+{" token" : "919", "nama": "BONI", "pangkalan": "BBS"}
+{" token" : "1103", "nama": "HERI", "pangkalan": "BDC"}
+{" token" : "914", "nama": "P CECEP KB", "pangkalan": "FREELANCE KB"}
+{" token" : "941", "nama": "P DENI", "pangkalan": "GAMAH"}
+{" token" : "772", "nama": "TONI CIBURIAL", "pangkalan": "FREELANCE"}
+{" token" : "1294", "nama": "BORIS", "pangkalan": "BLOK M"}
+{" token" : "1173", "nama": "JAJANG", "pangkalan": "ALAKEFEK"}
+{" token" : "063", "nama": "ABIDIN", "pangkalan": "SINAR ALAM"}
+{" token" : "347", "nama": "DIKI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1345", "nama": "FIRMAN", "pangkalan": "FREELANCE"}
+{" token" : "654", "nama": "SOLEH", "pangkalan": "WHIFER"}
+{" token" : "1100", "nama": "MUHYI", "pangkalan": "ALAKEFEK"}
+{" token" : "1313", "nama": "BAYEN", "pangkalan": "BDHAZ"}
+{" token" : "653", "nama": "DADANG CIANJUR", "pangkalan": "FREELANCE"}
+{" token" : "843", "nama": "DODI NDC", "pangkalan": "FREELANCE"}
+{" token" : "1242", "nama": "ALI", "pangkalan": "CRC 2"}
+{" token" : "602", "nama": "MAMAT KB", "pangkalan": "FREELANCE KB"}
+{" token" : "780", "nama": "PA ACONG KB", "pangkalan": "PPGC"}
+{" token" : "339", "nama": "ZAENAL", "pangkalan": "SK"}
+{" token" : "254", "nama": "JIJI RANGKAS", "pangkalan": "FREELANCE"}
+{" token" : "XX2", "nama": "YADI POC", "pangkalan": "FREELANCE"}
+{" token" : "1122", "nama": "NANA", "pangkalan": "FREELANCE"}
+{" token" : "011", "nama": "IBRAHIM 087882993330", "pangkalan": "FREELANCE"}
+{" token" : "434", "nama": "RUSLAN", "pangkalan": "AL FARUQ"}
+{" token" : "321", "nama": "SAMIN", "pangkalan": "KOMPAK"}
+{" token" : "271", "nama": "SADAM", "pangkalan": "AL BANTANI"}
+{" token" : "1425", "nama": "HASAN", "pangkalan": "FREELANCE"}
+{" token" : "949", "nama": "UJANG", "pangkalan": "FAMILY"}
+{" token" : "1145", "nama": "ABU LUKI", "pangkalan": "KOMPAK"}
+{" token" : "1062", "nama": "ASEP COKRO", "pangkalan": "FREELANCE"}
+{" token" : "467", "nama": "AFANG", "pangkalan": "FREELANCE"}
+{" token" : "241", "nama": "F AZIS", "pangkalan": "ALHALIJI"}
+{" token" : "842", "nama": "APUNG", "pangkalan": "FREELANCE"}
+{" token" : "886", "nama": "ARIF", "pangkalan": "NEWSTAR"}
+{" token" : "895", "nama": "AMIN", "pangkalan": "IGP"}
+{" token" : "1320", "nama": "AGUS IBRAHIM", "pangkalan": "BBS"}
+{" token" : "1335", "nama": "ABDURAHMAN", "pangkalan": "LF"}
+{" token" : "414", "nama": "GANDI", "pangkalan": "ARRAHIM"}
+{" token" : "740", "nama": "ABANG ISMAIL JKT", "pangkalan": "FREELANCE"}
+{" token" : "138", "nama": "H DASENG", "pangkalan": "JRC"}
+{" token" : "492", "nama": "SULTAN PUNCAK", "pangkalan": "FREELANCE"}
+{" token" : "1200", "nama": "TAN TAN", "pangkalan": "FREELANCE"}
+{" token" : "1395", "nama": "AGUNG BDC", "pangkalan": "BDC"}
+{" token" : "1306", "nama": "DEDE MIFTAH", "pangkalan": "WDS"}
+{" token" : "971", "nama": "ROJUDIN", "pangkalan": "FREELANCE"}
+{" token" : "1424", "nama": "ANDI AGUSTINA", "pangkalan": "ALAKEFEK"}
+{" token" : "297", "nama": "SALIM", "pangkalan": "HALLA INDONESIA"}
+{" token" : "696", "nama": "YUDI", "pangkalan": "WDS"}
+{" token" : "380", "nama": "FAIZ GOLF", "pangkalan": "FREELANCE"}
+{" token" : "1195", "nama": "ADI SADONG", "pangkalan": "FAMILY"}
+{" token" : "1281", "nama": "DADO", "pangkalan": "BBS"}
+{" token" : "756", "nama": "MAS SULTON", "pangkalan": "FREELANCE"}
+{" token" : "642", "nama": "RAHMAT KACAMATA", "pangkalan": "FREELANCE"}
+{" token" : "417", "nama": "ENDANG", "pangkalan": "LF"}
+{" token" : "030", "nama": "SOLEHUDIN", "pangkalan": "PPGC"}
+{" token" : "1087", "nama": "RULI", "pangkalan": "SEKTOR C"}
+{" token" : "1071", "nama": "SAIFULLAH", "pangkalan": "ALAKEFEK"}
+{" token" : "802", "nama": "INDRA TEH NENDEN", "pangkalan": "FREELANCE"}
+{" token" : "1132", "nama": "AHMAD", "pangkalan": "IPPA"}
+{" token" : "665", "nama": "ARIS", "pangkalan": "SAVANA"}
+{" token" : "314", "nama": "YOGA AL ZAZERA", "pangkalan": "FREELANCE"}
+{" token" : "547", "nama": "YADIN", "pangkalan": "ADC"}
+{" token" : "754", "nama": "DADANG", "pangkalan": "FREELANCE"}
+{" token" : "298", "nama": "IRFAN", "pangkalan": "KPCP REBORN"}
+{" token" : "947", "nama": "BAKRI", "pangkalan": "RANTAU"}
+{" token" : "545", "nama": "LEMAN GEROBAG", "pangkalan": "FREELANCE"}
+{" token" : "1213", "nama": "RIDWAN", "pangkalan": "FREELANCE"}
+{" token" : "779", "nama": "DAYAT", "pangkalan": "BBS"}
+{" token" : "1210", "nama": "KOMARUDIN", "pangkalan": "KOMPAK"}
+{" token" : "834", "nama": "SOLIHIN", "pangkalan": "OASIS"}
+{" token" : "1137", "nama": "ANDI", "pangkalan": "WHIFER"}
+{" token" : "1274", "nama": "ALIF", "pangkalan": "BBS"}
+{" token" : "961", "nama": "P ASEP", "pangkalan": "RANTAU"}
+{" token" : "596", "nama": "DEDE MANSYUR", "pangkalan": "KOMPAK"}
+{" token" : "465", "nama": "DEDI GSPP", "pangkalan": "FREELANCE"}
+{" token" : "420", "nama": "DIKDIK", "pangkalan": "BBS"}
+{" token" : "620", "nama": "JALIL JKT ATTOYIBIN", "pangkalan": "FREELANCE"}
+{" token" : "797", "nama": "DEDEN", "pangkalan": "WDS"}
+{" token" : "966", "nama": "SUMINTA", "pangkalan": "SGA"}
+{" token" : "1231", "nama": "TOHIR", "pangkalan": "FREELANCE"}
+{" token" : "428", "nama": "JUNAEDI JKT", "pangkalan": "FREELANCE"}
+{" token" : "681", "nama": "P JAJANG ", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "1252", "nama": "NANTO", "pangkalan": "ALAKEFEK"}
+{" token" : "1414", "nama": "IMAM", "pangkalan": "BDC"}
+{" token" : "907", "nama": "SAPRAWI", "pangkalan": "FREELANCE"}
+{" token" : "865", "nama": "KODEL", "pangkalan": "JABAL AHDAR"}
+{" token" : "1333", "nama": "HENDI", "pangkalan": "PESONA ALAM"}
+{" token" : "260", "nama": "NURDIN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "727", "nama": "P H AA", "pangkalan": "P3CB"}
+{" token" : "990", "nama": "DACIM", "pangkalan": "RANTAU"}
+{" token" : "115", "nama": "AHMAD", "pangkalan": "PESONA ALAM"}
+{" token" : "1409", "nama": "ASMUL", "pangkalan": "FMID"}
+{" token" : "1211", "nama": "ISMET", "pangkalan": "BBS"}
+{" token" : "1188", "nama": "RUDI", "pangkalan": "EXIST"}
+{" token" : "1175", "nama": "ABDILLAH JKT", "pangkalan": "FREELANCE"}
+{" token" : "1316", "nama": "P AHMAD", "pangkalan": "ALAKEFEK"}
+{" token" : "871", "nama": "ENDANG BOGEL", "pangkalan": "CRC 2"}
+{" token" : "543", "nama": "ALI MUKTI", "pangkalan": "HPI"}
+{" token" : "433", "nama": "PERDIN", "pangkalan": "CRC 2"}
+{" token" : "937", "nama": "AMIR JKT", "pangkalan": "FREELANCE"}
+{" token" : "1380", "nama": "ODAD", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "764", "nama": "YOSEP", "pangkalan": "X ONE"}
+{" token" : "766", "nama": "KAMAL", "pangkalan": "BBS"}
+{" token" : "1229", "nama": "UMAR", "pangkalan": "HALLA INDONESIA"}
+{" token" : "850", "nama": "INDRA BAMBOW", "pangkalan": "BDHAZ"}
+{" token" : "1406", "nama": "IYANG CIBEREUM", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "1224", "nama": "LEO", "pangkalan": "SAVANA"}
+{" token" : "1357", "nama": "ALI SURABAYA", "pangkalan": "FREELANCE"}
+{" token" : "1148", "nama": "IWAN", "pangkalan": "ARRAHIM"}
+{" token" : "849", "nama": "ADE", "pangkalan": "WRC"}
+{" token" : "1233", "nama": "ALI", "pangkalan": "PPGC"}
+{" token" : "1073", "nama": "ANGGA", "pangkalan": "LF"}
+{" token" : "1110", "nama": "E SARIFUDIN", "pangkalan": "FREELANCE"}
+{" token" : "847", "nama": "HAYKAL", "pangkalan": "ALHALIJI"}
+{" token" : "1157", "nama": "KHALID", "pangkalan": "ALAKEFEK"}
+{" token" : "704", "nama": "YUSUF BIS", "pangkalan": "FREELANCE"}
+{" token" : "1141", "nama": "KAMAL", "pangkalan": "SEKTOR C"}
+{" token" : "915", "nama": "YANA", "pangkalan": "ASR"}
+{" token" : "240", "nama": "FAUZI CIBUBUR", "pangkalan": "ALHALIJI"}
+{" token" : "1383", "nama": "RIDWAN", "pangkalan": "FREELANCE"}
+{" token" : "510", "nama": "YANA", "pangkalan": "CRC 1"}
+{" token" : "589", "nama": "NURHADI", "pangkalan": "AL FARUQ"}
+{" token" : "1054", "nama": "ERIK", "pangkalan": "AL BANTANI"}
+{" token" : "1299", "nama": "HASAN", "pangkalan": "ARRAHIM"}
+{" token" : "1382", "nama": "AHU", "pangkalan": "SDS"}
+{" token" : "1392", "nama": "AJI", "pangkalan": "GUNUNG JATI"}
+{" token" : "227", "nama": "GOZALI", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1288", "nama": "PANDI", "pangkalan": "ALAKEFEK"}
+{" token" : "1422", "nama": "RISWAN BAPER", "pangkalan": "FREELANCE"}
+{" token" : "1121", "nama": "BADRU", "pangkalan": "FREELANCE"}
+{" token" : "1334", "nama": "H BURHAN", "pangkalan": "OASIS"}
+{" token" : "1212", "nama": "MIFTAH", "pangkalan": "ALMAWADA"}
+{" token" : "1010", "nama": "AGUNG", "pangkalan": "FREELANCE"}
+{" token" : "564", "nama": "ASEP JEPANG KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1298", "nama": "HADEN", "pangkalan": "HPI"}
+{" token" : "1030", "nama": "MUSA CEMONG", "pangkalan": "FREELANCE"}
+{" token" : "1302", "nama": "RIAN", "pangkalan": "WDS"}
+{" token" : "900", "nama": "HADI", "pangkalan": "HPI"}
+{" token" : "1130", "nama": "IRAWAN", "pangkalan": "ARRAHIM"}
+{" token" : "064", "nama": "ELAN", "pangkalan": "JDC"}
+{" token" : "973", "nama": "HENDRI", "pangkalan": "TR FAMILY"}
+{" token" : "341", "nama": "H DIDIN", "pangkalan": "HABIBI FAMILY"}
+{" token" : "1072", "nama": "AFIF", "pangkalan": "AL FARUQ"}
+{" token" : "1304", "nama": "ASEP", "pangkalan": "FREELANCE"}
+{" token" : "323", "nama": "ROHMAN", "pangkalan": "AL FARUQ"}
+{" token" : "735", "nama": "SATRIO", "pangkalan": "FREELANCE"}
+{" token" : "1029", "nama": "ZUBAIRI UMAR", "pangkalan": "PPGC"}
+{" token" : "1079", "nama": "RENDI", "pangkalan": "AL FARUQ"}
+{" token" : "1136", "nama": "JUNAEDI", "pangkalan": "ARAHMAH"}
+{" token" : "692", "nama": "AHMAD NAWAWI", "pangkalan": "SK"}
+{" token" : "877", "nama": "IBNU", "pangkalan": "PESONA ALAM"}
+{" token" : "848", "nama": "AHMAD NETRAL", "pangkalan": "FREELANCE"}
+{" token" : "1250", "nama": "CEPOY", "pangkalan": "BDHAZ"}
+{" token" : "1125", "nama": "MOCH WAHID", "pangkalan": "FREELANCE"}
+{" token" : "1283", "nama": "RATIM", "pangkalan": "IGP"}
+{" token" : "400", "nama": "ZAKI", "pangkalan": "GHIBET"}
+{" token" : "472", "nama": "ASEP SULTAN CV", "pangkalan": "FREELANCE"}
+{" token" : "870", "nama": "JHON", "pangkalan": "WRC"}
+{" token" : "509", "nama": "P ASEP TB", "pangkalan": "EXIST"}
+{" token" : "830", "nama": "FAJAR", "pangkalan": "FREELANCE"}
+{" token" : "960", "nama": "DADANG", "pangkalan": "HPI"}
+{" token" : "458", "nama": "ADI GUNA", "pangkalan": "LF"}
+{" token" : "1235", "nama": "FAJAR", "pangkalan": "GUNUNG JATI"}
+{" token" : "1075", "nama": "IRWAN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "092", "nama": "MUSTOFA", "pangkalan": "IPPA"}
+{" token" : "1421", "nama": "HILMAN", "pangkalan": "BGC"}
+{" token" : "618", "nama": "YUSUF", "pangkalan": "PPGC"}
+{" token" : "617", "nama": "IRFAN FAUZI", "pangkalan": "HALLA INDONESIA"}
+{" token" : "225", "nama": "RYAN TOYANG", "pangkalan": "FREELANCE"}
+{" token" : "760", "nama": "ADE MUHTAR", "pangkalan": "BDC"}
+{" token" : "1410", "nama": "ASRONI", "pangkalan": "ALAKEFEK"}
+{" token" : "931", "nama": "ENTIS", "pangkalan": "FREELANCE"}
+{" token" : "1387", "nama": "RIKI", "pangkalan": "IPPA"}
+{" token" : "1408", "nama": "ERI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "561", "nama": "H ADE", "pangkalan": "PPGC"}
+{" token" : "480", "nama": "IBENG", "pangkalan": "BGC"}
+{" token" : "1153", "nama": "RIZAL", "pangkalan": "BDC"}
+{" token" : "059", "nama": "DIN DIN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "222", "nama": "H SYARIF", "pangkalan": "P2C"}
+{" token" : "831", "nama": "ILHAM OZWK", "pangkalan": "FREELANCE"}
+{" token" : "1301", "nama": "HASAN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1198", "nama": "LUTFI", "pangkalan": "CRC 2"}
+{" token" : "1417", "nama": "BUBUN", "pangkalan": "BGC"}
+{" token" : "1411", "nama": "SULAEMAN SRC", "pangkalan": "FREELANCE"}
+{" token" : "1344", "nama": "CEMLONG HERMAN", "pangkalan": "EXIST"}
+{" token" : "1147", "nama": "HERI", "pangkalan": "FREELANCE"}
+{" token" : "1416", "nama": "ISMAIL", "pangkalan": "BBS"}
+{" token" : "1199", "nama": "RISKI GSPP", "pangkalan": "FREELANCE"}
+{" token" : "632", "nama": "YADI", "pangkalan": "LF"}
+{" token" : "948", "nama": "HASAN", "pangkalan": "CRC 2"}
+{" token" : "1405", "nama": "MOHAMAD", "pangkalan": "FREELANCE"}
+{" token" : "943", "nama": "BERNAT DS", "pangkalan": "FREELANCE"}
+{" token" : "644", "nama": "DADAY", "pangkalan": "ALMAWADA"}
+{" token" : "876", "nama": "DIDI", "pangkalan": "WDS"}
+{" token" : "1028", "nama": "HADI KB JACK TRAVEL", "pangkalan": "FREELANCE KB"}
+{" token" : "332", "nama": "IRMAN", "pangkalan": "RAMDANI"}
+{" token" : "525", "nama": "SOFYAN", "pangkalan": "NEWSTAR"}
+{" token" : "1080", "nama": "SUPRIADI", "pangkalan": "FREELANCE"}
+{" token" : "703", "nama": "TOHIR", "pangkalan": "FREELANCE"}
+{" token" : "1399", "nama": "UMAR", "pangkalan": "FREELANCE"}
+{" token" : "487", "nama": "YANA", "pangkalan": "BLOK M"}
+{" token" : "1415", "nama": "MUHAMAD JAELANI", "pangkalan": "DESTROY"}
+{" token" : "1330", "nama": "ABON HAMDUN GOLF", "pangkalan": "FREELANCE"}
+{" token" : "1297", "nama": "EKO", "pangkalan": "KGWM"}
+{" token" : "584", "nama": "P SALEH", "pangkalan": "SGA"}
+{" token" : "904", "nama": "SYARIFUDIN", "pangkalan": "LF"}
+{" token" : "493", "nama": "AHMAD SATIBI", "pangkalan": "FREELANCE"}
+{" token" : "1134", "nama": "AHMAD SUMARDI", "pangkalan": "ANAZMA"}
+{" token" : "901", "nama": "ARIF", "pangkalan": "GSPI"}
+{" token" : "1034", "nama": "BALON", "pangkalan": "FMID"}
+{" token" : "1238", "nama": "BENDOT", "pangkalan": "MDR"}
+{" token" : "908", "nama": "BOLOT", "pangkalan": "BMG"}
+{" token" : "1220", "nama": "INDRA", "pangkalan": "RANTAU"}
+{" token" : "899", "nama": "IPAN", "pangkalan": "NNC"}
+{" token" : "1367", "nama": "JAYA AL FATHAN", "pangkalan": "FREELANCE"}
+{" token" : "1118", "nama": "P AZIS ARI WIBOWO JKT", "pangkalan": "FREELANCE"}
+{" token" : "731", "nama": "RAMADHAN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1102", "nama": "ROBI", "pangkalan": "FREELANCE"}
+{" token" : "1386", "nama": "SANDI CBS", "pangkalan": "FREELANCE"}
+{" token" : "600", "nama": "YANTO AMVER", "pangkalan": "FREELANCE"}
+{" token" : "647", "nama": "ENDANG COPLOX GEROBAG", "pangkalan": "FREELANCE"}
+{" token" : "1032", "nama": "SADONG", "pangkalan": "FAMILY"}
+{" token" : "037", "nama": "PRAS", "pangkalan": "EXIST"}
+{" token" : "498", "nama": "RYAN", "pangkalan": "SEKTOR C"}
+{" token" : "1106", "nama": "DUDI SUNARDI", "pangkalan": "IGP"}
+{" token" : "1311", "nama": "GANDI", "pangkalan": "CRC 1"}
+{" token" : "235", "nama": "NANANG", "pangkalan": "CRC 2"}
+{" token" : "913", "nama": "ABDULLAH", "pangkalan": "KGWM"}
+{" token" : "667", "nama": "ABU REHAN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "891", "nama": "ACENG", "pangkalan": "ALAKEFEK"}
+{" token" : "811", "nama": "AGUS H (BOGE)", "pangkalan": "BDHAZ"}
+{" token" : "1401", "nama": "AHMAD H", "pangkalan": "AL FARUQ"}
+{" token" : "1412", "nama": "ANWAR", "pangkalan": "BGC"}
+{" token" : "880", "nama": "ERWIN", "pangkalan": "NIKREUH"}
+{" token" : "1244", "nama": "H SAFIK", "pangkalan": "FREELANCE"}
+{" token" : "1343", "nama": "HENDI", "pangkalan": "AL FARUQ"}
+{" token" : "358", "nama": "HERI", "pangkalan": "FAMILY"}
+{" token" : "573", "nama": "IBENG GEROBAG", "pangkalan": "FREELANCE"}
+{" token" : "930", "nama": "IRFAN", "pangkalan": "FREELANCE"}
+{" token" : "923", "nama": "OBAY", "pangkalan": "FREELANCE"}
+{" token" : "1237", "nama": "P AZIS", "pangkalan": "KOMPAK"}
+{" token" : "1307", "nama": "RAHMAT HIDAYAT", "pangkalan": "FREELANCE"}
+{" token" : "804", "nama": "RIZAL", "pangkalan": "SK"}
+{" token" : "994", "nama": "RUSLAN", "pangkalan": "BGC"}
+{" token" : "303", "nama": "UMAR", "pangkalan": "KPCP REBORN"}
+{" token" : "853", "nama": "YOGI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1076", "nama": "DANEL NJT PRO", "pangkalan": "FREELANCE"}
+{" token" : "781", "nama": "PA AI", "pangkalan": "BMG"}
+{" token" : "955", "nama": "RIDWAN", "pangkalan": "IPPA"}
+{" token" : "1204", "nama": "ADI", "pangkalan": "FREELANCE"}
+{" token" : "1004", "nama": "ARUL RAHMAN", "pangkalan": "NEWSTAR"}
+{" token" : "709", "nama": "H AZIS INPRES", "pangkalan": "FREELANCE"}
+{" token" : "1354", "nama": "IMAM BOGE", "pangkalan": "FREELANCE"}
+{" token" : "1384", "nama": "NOVEL", "pangkalan": "ALHALIJI"}
+{" token" : "686", "nama": "P JAJA", "pangkalan": "SAVANA"}
+{" token" : "768", "nama": "ABU RAMZI", "pangkalan": "ALHALIJI"}
+{" token" : "349", "nama": "ABU RIZKI", "pangkalan": "ALAKEFEK"}
+{" token" : "1273", "nama": "ACE", "pangkalan": "OASIS"}
+{" token" : "1268", "nama": "ADIT", "pangkalan": "FREELANCE"}
+{" token" : "1228", "nama": "ADIT", "pangkalan": "RANTAU"}
+{" token" : "1346", "nama": "ARIS", "pangkalan": "WDS"}
+{" token" : "1254", "nama": "CAMAT", "pangkalan": "RANTAU"}
+{" token" : "1324", "nama": "DEDE", "pangkalan": "EXIST"}
+{" token" : "1266", "nama": "DEDI", "pangkalan": "PPGC"}
+{" token" : "585", "nama": "ENDANG", "pangkalan": "ADC"}
+{" token" : "1215", "nama": "H IRFAN", "pangkalan": "OASIS"}
+{" token" : "279", "nama": "HAERUL", "pangkalan": "H2GU"}
+{" token" : "1377", "nama": "HERI", "pangkalan": "HPI"}
+{" token" : "1187", "nama": "IMAN", "pangkalan": "FMID"}
+{" token" : "1024", "nama": "IWAN", "pangkalan": "CRC 2"}
+{" token" : "812", "nama": "JAGRES GSPP", "pangkalan": "FREELANCE"}
+{" token" : "809", "nama": "JAMIL", "pangkalan": "NNC"}
+{" token" : "403", "nama": "JENAL", "pangkalan": "X ONE"}
+{" token" : "1296", "nama": "MIRZA", "pangkalan": "GSPI"}
+{" token" : "851", "nama": "P HASAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "015", "nama": "SAMUD", "pangkalan": "FREELANCE"}
+{" token" : "789", "nama": "UJANG", "pangkalan": "KGWM"}
+{" token" : "656", "nama": "UJANG BANDUNG", "pangkalan": "FREELANCE"}
+{" token" : "1019", "nama": "MULI", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "1257", "nama": "NANDAR", "pangkalan": "ALAKEFEK"}
+{" token" : "944", "nama": "MAMUR", "pangkalan": "WDS"}
+{" token" : "1285", "nama": "YUSUF", "pangkalan": "SDS"}
+{" token" : "986", "nama": "FAUZI", "pangkalan": "SDS"}
+{" token" : "1260", "nama": "BAYU", "pangkalan": "FREELANCE"}
+{" token" : "1116", "nama": "ERWIN", "pangkalan": "WRC"}
+{" token" : "003", "nama": "ADE", "pangkalan": "SINAR ALAM"}
+{" token" : "1022", "nama": "ASEP", "pangkalan": "FREELANCE"}
+{" token" : "1243", "nama": "DADUNG", "pangkalan": "SDS"}
+{" token" : "1120", "nama": "DEDI", "pangkalan": "MANTRA"}
+{" token" : "179", "nama": "FERLING JKT", "pangkalan": "SHK"}
+{" token" : "761", "nama": "INDRA", "pangkalan": "DESTROY"}
+{" token" : "378", "nama": "INDRA RAHARJA KEDUTAAN", "pangkalan": "FREELANCE"}
+{" token" : "005", "nama": "IRWAN", "pangkalan": "FREELANCE"}
+{" token" : "889", "nama": "ISMAIL", "pangkalan": "JABAL AHDAR"}
+{" token" : "1241", "nama": "JENI ARIFIN", "pangkalan": "FREELANCE"}
+{" token" : "920", "nama": "MUHSIN", "pangkalan": "OASIS"}
+{" token" : "775", "nama": "P HERI", "pangkalan": "ADC"}
+{" token" : "1085", "nama": "SULE", "pangkalan": "RANTAU"}
+{" token" : "1350", "nama": "UBED", "pangkalan": "SEKTOR C"}
+{" token" : "1363", "nama": "UJ", "pangkalan": "IPPA"}
+{" token" : "724", "nama": "WALID", "pangkalan": "FAMILY"}
+{" token" : "1127", "nama": "AZIS", "pangkalan": "OASIS"}
+{" token" : "1376", "nama": "FARHAN", "pangkalan": "IGP"}
+{" token" : "1226", "nama": "WAHYU", "pangkalan": "FREELANCE"}
+{" token" : "1088", "nama": "BAJANG CIANJUR", "pangkalan": "HPI"}
+{" token" : "795", "nama": "BUDI OJEG", "pangkalan": "FREELANCE"}
+{" token" : "415", "nama": "ARIF", "pangkalan": "FAMILY"}
+{" token" : "711", "nama": "AZIS TONES TRAVEL", "pangkalan": "FREELANCE"}
+{" token" : "150", "nama": "INDRA CEMARA", "pangkalan": "PESONA ALAM"}
+{" token" : "993", "nama": "ABDUL", "pangkalan": "FREELANCE"}
+{" token" : "981", "nama": "ABDURAHMAN COKRO", "pangkalan": "FREELANCE"}
+{" token" : "1186", "nama": "AGUS", "pangkalan": "FREELANCE"}
+{" token" : "1293", "nama": "ALI YUSUF", "pangkalan": "FREELANCE"}
+{" token" : "1189", "nama": "CECENG", "pangkalan": "NNC"}
+{" token" : "1398", "nama": "DANDI DENDI", "pangkalan": "FREELANCE"}
+{" token" : "1027", "nama": "DENI CIBURIAL", "pangkalan": "FREELANCE"}
+{" token" : "1017", "nama": "DIKA", "pangkalan": "JDC"}
+{" token" : "1171", "nama": "FAIZAL", "pangkalan": "FREELANCE"}
+{" token" : "1167", "nama": "INDRA", "pangkalan": "BDHAZ"}
+{" token" : "1375", "nama": "RANGGA", "pangkalan": "JDC"}
+{" token" : "224", "nama": "SAMSUL", "pangkalan": "LF"}
+{" token" : "1305", "nama": "SOPI", "pangkalan": "PPGC"}
+{" token" : "1214", "nama": "YUSUF", "pangkalan": "X ONE"}
+{" token" : "262", "nama": "ADIE SEVA", "pangkalan": "FREELANCE"}
+{" token" : "1205", "nama": "CAWEL", "pangkalan": "SEKTOR C"}
+{" token" : "987", "nama": "IPIN", "pangkalan": "CRC 1"}
+{" token" : "1031", "nama": "MUSLIM", "pangkalan": "MURSID AMANAH"}
+{" token" : "182", "nama": "ROHIM", "pangkalan": "FMID"}
+{" token" : "365", "nama": "TAHYA", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1374", "nama": "H YAYA", "pangkalan": "ALAKEFEK"}
+{" token" : "824", "nama": "LUTFI", "pangkalan": "FREELANCE"}
+{" token" : "612", "nama": "MAHMUD JKT", "pangkalan": "FREELANCE"}
+{" token" : "393", "nama": "MUHAMAD", "pangkalan": "ALHALIJI"}
+{" token" : "1015", "nama": "P YAYAT KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1348", "nama": "SETIAWAN", "pangkalan": "X ONE"}
+{" token" : "1379", "nama": "TOYO", "pangkalan": "ARRAHIM"}
+{" token" : "599", "nama": "ULE", "pangkalan": "FREELANCE"}
+{" token" : "1403", "nama": "YOGI GSPP", "pangkalan": "FREELANCE"}
+{" token" : "1026", "nama": "YOSEF", "pangkalan": "SAHL TOUR"}
+{" token" : "959", "nama": "ERWIN", "pangkalan": "BBS"}
+{" token" : "1340", "nama": "ISMAIL", "pangkalan": "FREELANCE"}
+{" token" : "1319", "nama": "SOLEH", "pangkalan": "FREELANCE"}
+{" token" : "568", "nama": "KAKA INDRA", "pangkalan": "PESONA ALAM"}
+{" token" : "1166", "nama": "SABIT FAMILY GOLF", "pangkalan": "FREELANCE"}
+{" token" : "820", "nama": "JUDIN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1369", "nama": "AGUS", "pangkalan": "MURSID AMANAH"}
+{" token" : "507", "nama": "ANDI", "pangkalan": "HPI"}
+{" token" : "1020", "nama": "ANDIKA", "pangkalan": "TRIPLE S"}
+{" token" : "1083", "nama": "HUSEN", "pangkalan": "FREELANCE"}
+{" token" : "1053", "nama": "IRFAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "1353", "nama": "JAYA", "pangkalan": "ANAZMA"}
+{" token" : "1338", "nama": "NAJIB", "pangkalan": "KOMPAK"}
+{" token" : "706", "nama": "P HUSEN", "pangkalan": "ALHALIJI"}
+{" token" : "1265", "nama": "RAHMAN", "pangkalan": "NNC"}
+{" token" : "748", "nama": "TEH YUNI", "pangkalan": "FREELANCE"}
+{" token" : "077", "nama": "WARTOYO (PACET)", "pangkalan": "BDHAZ"}
+{" token" : "938", "nama": "YANA", "pangkalan": "PSDA"}
+{" token" : "1190", "nama": "FAHRUL", "pangkalan": "BEDOG LOCOT"}
+{" token" : "411", "nama": "WAHONO JKT", "pangkalan": "FREELANCE"}
+{" token" : "051", "nama": "ABU LUTFI", "pangkalan": "ALHALIJI"}
+{" token" : "1322", "nama": "ADO", "pangkalan": "WRC"}
+{" token" : "1364", "nama": "DARUS", "pangkalan": "ADC"}
+{" token" : "950", "nama": "DIKA", "pangkalan": "CRC 1"}
+{" token" : "016", "nama": "IRWAN", "pangkalan": "MDR"}
+{" token" : "1182", "nama": "MUHAMAD ZAINI", "pangkalan": "TR FAMILY"}
+{" token" : "597", "nama": "HERI", "pangkalan": "ALAKEFEK"}
+{" token" : "1276", "nama": "RYAN", "pangkalan": "PPGC"}
+{" token" : "1275", "nama": "FUAD", "pangkalan": "ALAKEFEK"}
+{" token" : "1089", "nama": "JAWIL", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1372", "nama": "ARI", "pangkalan": "ANAZMA"}
+{" token" : "1278", "nama": "DANI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1160", "nama": "DENI", "pangkalan": "AL FARUQ"}
+{" token" : "841", "nama": "DENI GSPP", "pangkalan": "FREELANCE"}
+{" token" : "1310", "nama": "FAJAR GUGUN", "pangkalan": "FREELANCE"}
+{" token" : "1347", "nama": "HARIRI", "pangkalan": "FREELANCE"}
+{" token" : "713", "nama": "HERI H MARWAN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1295", "nama": "IWAN YADI TEMPE", "pangkalan": "FREELANCE"}
+{" token" : "120", "nama": "LUKMAN", "pangkalan": "KOMPAK"}
+{" token" : "1008", "nama": "MALIK", "pangkalan": "FREELANCE"}
+{" token" : "1179", "nama": "P JAMHUR", "pangkalan": "JDC"}
+{" token" : "1094", "nama": "RAHMAT ASSALAM TOUR", "pangkalan": "FREELANCE"}
+{" token" : "821", "nama": "UJANG", "pangkalan": "WDS"}
+{" token" : "875", "nama": "UJANG AVES TOUR", "pangkalan": "FREELANCE"}
+{" token" : "455", "nama": "AFFANDI JKT", "pangkalan": "FREELANCE"}
+{" token" : "662", "nama": "IWA", "pangkalan": "CRC 1"}
+{" token" : "1021", "nama": "DASEP", "pangkalan": "P2C"}
+{" token" : "723", "nama": "EMAN SULAEMAN", "pangkalan": "WDS"}
+{" token" : "1389", "nama": "SAMSUDIN", "pangkalan": "BDC"}
+{" token" : "1253", "nama": "ANDI", "pangkalan": "4G"}
+{" token" : "1270", "nama": "ARUL BASE  CAMP PUNCAK", "pangkalan": "FREELANCE"}
+{" token" : "581", "nama": "ASEP BJ CBS", "pangkalan": "FREELANCE"}
+{" token" : "894", "nama": "BULEUD", "pangkalan": "FREELANCE"}
+{" token" : "1349", "nama": "DENI", "pangkalan": "OASIS"}
+{" token" : "1342", "nama": "FUJI", "pangkalan": "FREELANCE"}
+{" token" : "1092", "nama": "INDRA JKT", "pangkalan": "FREELANCE"}
+{" token" : "1044", "nama": "OCIM", "pangkalan": "WHIFER"}
+{" token" : "1240", "nama": "REZA KB", "pangkalan": "PPGC"}
+{" token" : "1156", "nama": "RIAN AL AKBAR", "pangkalan": "FREELANCE KB"}
+{" token" : "1258", "nama": "RUSLAN", "pangkalan": "FREELANCE"}
+{" token" : "1239", "nama": "TORIK JKT", "pangkalan": "FREELANCE"}
+{" token" : "1327", "nama": "UMAR", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "630", "nama": "AHMAD EFENDI", "pangkalan": "BDC"}
+{" token" : "832", "nama": "HAMID", "pangkalan": "ALAKEFEK"}
+{" token" : "896", "nama": "IKBAL", "pangkalan": "SAVANA"}
+{" token" : "1236", "nama": "SUPRIADI JKT", "pangkalan": "FREELANCE"}
+{" token" : "1068", "nama": "TAUFIK", "pangkalan": "X ONE"}
+{" token" : "1323", "nama": "AGUS SURYANA", "pangkalan": "BBS"}
+{" token" : "610", "nama": "ALOY", "pangkalan": "WHIFER"}
+{" token" : "1402", "nama": "DANI", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "715", "nama": "YOSEP 6707", "pangkalan": "FREELANCE"}
+{" token" : "888", "nama": "AGUS", "pangkalan": "ADC"}
+{" token" : "710", "nama": "JEJE", "pangkalan": "SEKTOR C"}
+{" token" : "1058", "nama": "MUHIDIN", "pangkalan": "KOMPAK"}
+{" token" : "1139", "nama": "PIPIH", "pangkalan": "P3CB"}
+{" token" : "815", "nama": "DEDI ARAB", "pangkalan": "FREELANCE"}
+{" token" : "1371", "nama": "IYAN", "pangkalan": "SDS"}
+{" token" : "075", "nama": "TATANG", "pangkalan": "BEDOG LOCOT"}
+{" token" : "881", "nama": "BUDI JKT ATTOYIBIN", "pangkalan": "FREELANCE"}
+{" token" : "1050", "nama": "BUHORI", "pangkalan": "HPI"}
+{" token" : "1317", "nama": "EDI", "pangkalan": "AL FARUQ"}
+{" token" : "1086", "nama": "MASYUD ALI MANGGA 2 JKT", "pangkalan": "FREELANCE"}
+{" token" : "103", "nama": "RULI", "pangkalan": "WDS"}
+{" token" : "267", "nama": "YUDA PERMADI", "pangkalan": "FREELANCE"}
+{" token" : "1165", "nama": "YUSUF", "pangkalan": "FREELANCE"}
+{" token" : "952", "nama": "ARI", "pangkalan": "FREELANCE"}
+{" token" : "1246", "nama": "EDE", "pangkalan": "CRC 1"}
+{" token" : "1011", "nama": "BOBI", "pangkalan": "SURKEN"}
+{" token" : "1404", "nama": "CANDRA CIBEREUM", "pangkalan": "FREELANCE"}
+{" token" : "1413", "nama": "EMBIS", "pangkalan": "FREELANCE"}
+{" token" : "1279", "nama": "ERWIN", "pangkalan": "BDC"}
+{" token" : "921", "nama": "NURJAMAN", "pangkalan": "FREELANCE"}
+{" token" : "1361", "nama": "JENAL", "pangkalan": "WHIFER"}
+{" token" : "1248", "nama": "MUIS ASEP", "pangkalan": "FREELANCE"}
+{" token" : "1133", "nama": "RIFA", "pangkalan": "CRC 1"}
+{" token" : "1419", "nama": "YANTO", "pangkalan": "KGWM"}
+{" token" : "1420", "nama": "DEBI", "pangkalan": "SDS"}
+{" token" : "1332", "nama": "ADE AMVER", "pangkalan": "ADC"}
+{" token" : "774", "nama": "ANDRI", "pangkalan": "AL BANTANI"}
+{" token" : "1337", "nama": "AZAM", "pangkalan": "FREELANCE"}
+{" token" : "992", "nama": "H BADRUN", "pangkalan": "KPCP REBORN"}
+{" token" : "663", "nama": "JAWI", "pangkalan": "ADC"}
+{" token" : "1407", "nama": "USEP", "pangkalan": "KGWM"}
+{" token" : "1060", "nama": "WAHYU", "pangkalan": "ADC"}
+{" token" : "1368", "nama": "ALI", "pangkalan": "SAHL TOUR"}
+{" token" : "1391", "nama": "TATA", "pangkalan": "WHIFER"}
+{" token" : "TRANSAKSI AWAL", "nama": "TRANSAKSI AWAL", "pangkalan": "-"}
+{" token" : "116", "nama": "PONGKI", "pangkalan": "JRC"}
+{" token" : "454", "nama": "P ONIM JKT", "pangkalan": "FREELANCE"}
+{" token" : "1191", "nama": "LUKMAN", "pangkalan": "FMID"}
+{" token" : "159", "nama": "UDO", "pangkalan": "WRC"}
+{" token" : "482", "nama": "BUSRO", "pangkalan": "ALAKEFEK"}
+{" token" : "932", "nama": "SUPRI", "pangkalan": "MDR"}
+{" token" : "556", "nama": "ERSYAD MUHAMAD", "pangkalan": "HALLA INDONESIA"}
+{" token" : "XX1", "nama": "AZIS JKT", "pangkalan": "-"}
+{" token" : "462", "nama": "FIAT", "pangkalan": "FREELANCE"}
+{" token" : "957", "nama": "DANI", "pangkalan": "NIKREUH"}
+{" token" : "264", "nama": "AZIS CIBEREUM", "pangkalan": "FREELANCE"}
+{" token" : "549", "nama": "ABU YUSUF", "pangkalan": "SAWAG ADAM"}
+{" token" : "866", "nama": "HADI", "pangkalan": "JDC"}
+{" token" : "925", "nama": "RAHMAN IP2B", "pangkalan": "FREELANCE"}
+{" token" : "664", "nama": "RIAN B", "pangkalan": "FREELANCE"}
+{" token" : "1370", "nama": "TITO PRAMUDIANA", "pangkalan": "GAMAH"}
+{" token" : "242", "nama": "DORI", "pangkalan": "ARAHMAH"}
+{" token" : "1282", "nama": "ARI", "pangkalan": "ALAKEFEK"}
+{" token" : "1023", "nama": "BOGEL", "pangkalan": "EXIST"}
+{" token" : "1359", "nama": "DAYAT", "pangkalan": "FREELANCE"}
+{" token" : "936", "nama": "FARHAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "259", "nama": "H CUCU KUSWANA", "pangkalan": "PPGC"}
+{" token" : "452", "nama": "IRWAN S", "pangkalan": "WDS"}
+{" token" : "910", "nama": "MADUN", "pangkalan": "IGP"}
+{" token" : "1149", "nama": "TRIMAN JKT", "pangkalan": "FREELANCE"}
+{" token" : "1040", "nama": "IWAN GARONG", "pangkalan": "P3CB"}
+{" token" : "054", "nama": "ISTRI INDRA", "pangkalan": "PESONA ALAM"}
+{" token" : "1038", "nama": "RIZKI", "pangkalan": "FREELANCE"}
+{" token" : "1290", "nama": "APEP", "pangkalan": "SDS"}
+{" token" : "882", "nama": "DADANG APONG", "pangkalan": "FREELANCE"}
+{" token" : "025", "nama": "SULAEMAN", "pangkalan": "KOMPAK"}
+{" token" : "643", "nama": "DENI ABU ARAB", "pangkalan": "FREELANCE"}
+{" token" : "1360", "nama": "YADI", "pangkalan": "FMID"}
+{" token" : "836", "nama": "ABDUL HAMID ", "pangkalan": "SEKTOR C"}
+{" token" : "782", "nama": "ADE FAHRUDIN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1328", "nama": "ADE OPIK", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "154", "nama": "ADRIANA", "pangkalan": "NIKREUH"}
+{" token" : "1051", "nama": "BUDI", "pangkalan": "FAMILY"}
+{" token" : "126", "nama": "DANDI", "pangkalan": "JRC"}
+{" token" : "1234", "nama": "DANU", "pangkalan": "HPI"}
+{" token" : "1227", "nama": "DEMANIK KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1325", "nama": "EDO", "pangkalan": "PPGC"}
+{" token" : "1206", "nama": "HELMI GEROBAG", "pangkalan": "FREELANCE"}
+{" token" : "1178", "nama": "HOLILUDIN", "pangkalan": "FREELANCE"}
+{" token" : "439", "nama": "IHSAN GARASI", "pangkalan": "FREELANCE"}
+{" token" : "906", "nama": "MAS AZIS", "pangkalan": "FREELANCE"}
+{" token" : "769", "nama": "RENDI", "pangkalan": "ALAKEFEK"}
+{" token" : "1396", "nama": "RIFAL", "pangkalan": "AL FARUQ"}
+{" token" : "1284", "nama": "SURYANA", "pangkalan": "DESTROY"}
+{" token" : "1225", "nama": "YUSUF", "pangkalan": "HPI"}
+{" token" : "1154", "nama": "AHMAD", "pangkalan": "IGP"}
+{" token" : "1219", "nama": "CACU", "pangkalan": "ADC"}
+{" token" : "792", "nama": "H SAMSUDIN", "pangkalan": "ALAKEFEK"}
+{" token" : "1117", "nama": "HAMDAN", "pangkalan": "X ONE"}
+{" token" : "1163", "nama": "HISYAM", "pangkalan": "ARRAHIM"}
+{" token" : "805", "nama": "JAJANG", "pangkalan": "DESTROY"}
+{" token" : "363", "nama": "P ONIM ", "pangkalan": "ADC"}
+{" token" : "1007", "nama": "UYUNG", "pangkalan": "NIKREUH"}
+{" token" : "1385", "nama": "AANG", "pangkalan": "FREELANCE"}
+{" token" : "1135", "nama": "ABDUL AZIS", "pangkalan": "BBS"}
+{" token" : "438", "nama": "ASEP RIDWAN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "997", "nama": "BEBEN", "pangkalan": "OASIS"}
+{" token" : "946", "nama": "KOMENG", "pangkalan": "JCO"}
+{" token" : "767", "nama": "DADEN", "pangkalan": "WDS"}
+{" token" : "1052", "nama": "DEWA", "pangkalan": "OASIS"}
+{" token" : "1255", "nama": "NANA", "pangkalan": "FAMILY PONCORAN"}
+{" token" : "984", "nama": "YASIR", "pangkalan": "MDR"}
+{" token" : "1256", "nama": "TANAKA", "pangkalan": "SHK"}
+{" token" : "1001", "nama": "TAUFIK", "pangkalan": "ALAKEFEK"}
+{" token" : "449", "nama": "IMAM", "pangkalan": "PANGRANGO HOLIDAY"}
+{" token" : "1315", "nama": "AGIS", "pangkalan": "FMID"}
+{" token" : "1169", "nama": "ARYA", "pangkalan": "BGC"}
+{" token" : "1164", "nama": "CECEN", "pangkalan": "ANAZMA"}
+{" token" : "1352", "nama": "LIKUR TAHYUDIN", "pangkalan": "BMG"}
+{" token" : "1326", "nama": "OMEN", "pangkalan": "BEDOG LOCOT"}
+{" token" : "1192", "nama": "RAHMAT", "pangkalan": "WRC"}
+{" token" : "081", "nama": "SUPRI", "pangkalan": "EXIST"}
+{" token" : "1216", "nama": "YUDA", "pangkalan": "AL FARUQ"}
+{" token" : "1249", "nama": "YUDI", "pangkalan": "TRIPLE S"}
+{" token" : "1314", "nama": "AGUS", "pangkalan": "BGC"}
+{" token" : "1184", "nama": "ASEP", "pangkalan": "CRC 2"}
+{" token" : "1388", "nama": "RIKI", "pangkalan": "FMID"}
+{" token" : "1390", "nama": "ADANG", "pangkalan": "PESONA ALAM"}
+{" token" : "1381", "nama": "AHMAD MARUF", "pangkalan": "WDS"}
+{" token" : "996", "nama": "BUSROH JKT", "pangkalan": "FREELANCE"}
+{" token" : "038", "nama": "SUGIH", "pangkalan": "EXIST"}
+{" token" : "1351", "nama": "WAWAN", "pangkalan": "FREELANCE"}
+{" token" : "1203", "nama": "DIDI", "pangkalan": "FREELANCE"}
+{" token" : "136", "nama": "ADE OPIK", "pangkalan": "JDC"}
+{" token" : "1321", "nama": "ARIF", "pangkalan": "BBS"}
+{" token" : "1397", "nama": "ASEP", "pangkalan": "X ONE"}
+{" token" : "246", "nama": "ASEP MANCUNG", "pangkalan": "FAMILY"}
+{" token" : "1037", "nama": "BONANG", "pangkalan": "FREELANCE"}
+{" token" : "1245", "nama": "CHOLID JKT", "pangkalan": "FREELANCE"}
+{" token" : "1262", "nama": "DANI", "pangkalan": "HALLA INDONESIA"}
+{" token" : "1263", "nama": "DORIF", "pangkalan": "BGC"}
+{" token" : "1318", "nama": "DUPONG", "pangkalan": "LF"}
+{" token" : "860", "nama": "FUAD", "pangkalan": "FREELANCE"}
+{" token" : "1039", "nama": "H DEDE", "pangkalan": "KGWM"}
+{" token" : "1394", "nama": "HABIB", "pangkalan": "ALAKEFEK"}
+{" token" : "613", "nama": "KODEL", "pangkalan": "NEWSTAR"}
+{" token" : "1078", "nama": "KOHAR", "pangkalan": "HPI"}
+{" token" : "290", "nama": "NAJIB M A", "pangkalan": "MURSID AMANAH"}
+{" token" : "878", "nama": "RUDI KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1043", "nama": "RYAN", "pangkalan": "FAMILY PONCORAN"}
+{" token" : "1183", "nama": "RYAN JKT", "pangkalan": "SHK"}
+{" token" : "1126", "nama": "TAUFIK", "pangkalan": "BGC"}
+{" token" : "483", "nama": "WAHYU ", "pangkalan": "OASIS"}
+{" token" : "1271", "nama": "YUSUF GOJALI", "pangkalan": "FREELANCE"}
+{" token" : "1303", "nama": "ZAKI JKT FARHANA GROUP", "pangkalan": "FREELANCE"}
+{" token" : "034", "nama": "ZENAL (BABAH ZEN)", "pangkalan": "BDHAZ"}
+{" token" : "1123", "nama": "ADIN", "pangkalan": "CRC 2"}
+{" token" : "026", "nama": "ADIN KB", "pangkalan": "FREELANCE KB"}
+{" token" : "236", "nama": "MAJID GSPP", "pangkalan": "FREELANCE"}
+{" token" : "929", "nama": "SOPIAN VOC", "pangkalan": "FREELANCE"}
+{" token" : "1067", "nama": "CEUCEU", "pangkalan": "BBS"}
+{" token" : "1356", "nama": "MUHAMAD", "pangkalan": "FREELANCE"}
+{" token" : "940", "nama": "MIKO", "pangkalan": "EXIST"}
+{" token" : "1111", "nama": "AMIR", "pangkalan": "ARRAHIM"}
+{" token" : "582", "nama": "ANDRI", "pangkalan": "FREELANCE"}
+{" token" : "1366", "nama": "BIBIH", "pangkalan": "WHIFER"}
+{" token" : "553", "nama": "JAMIL KB", "pangkalan": "FREELANCE KB"}
+{" token" : "1002", "nama": "IYAN", "pangkalan": "BGC"}
+{" token" : "1093", "nama": "AAY", "pangkalan": "OASIS"}
+{" token" : "838", "nama": "ADANG KB", "pangkalan": "FREELANCE KB"}
+{" token" : "854", "nama": "DADAN SAFIRA", "pangkalan": "FREELANCE"}
+{" token" : "684", "nama": "DEDI", "pangkalan": "FMID"}
+{" token" : "983", "nama": "ASEP", "pangkalan": "GAMAH"}
+{" token" : "928", "nama": "HILMAN", "pangkalan": "PPGC"}
+{" token" : "220", "nama": "HUSEIN", "pangkalan": "ALHALIJI"}
+{" token" : "1373", "nama": "RIAN", "pangkalan": "X ONE"}
+{" token" : "787", "nama": "TOPIQ MA", "pangkalan": "MURSID AMANAH"}
+{" token" : "399", "nama": "WA AJA", "pangkalan": "CRC 2"}
+{" token" : "1418", "nama": "HARI", "pangkalan": "FMID"}
+{" token" : "592", "nama": "ARIS", "pangkalan": "FREELANCE"}
+{" token" : "541", "nama": "ASEP KHOERI", "pangkalan": "NEWSTAR"}
+{" token" : "732", "nama": "MUKLIS", "pangkalan": "BDC"}
 ]

@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Member - Transparansi Saldo</title>
+    <title>Panel Member - Statistik Lengkap</title>
     <style>
         :root {
-            --bg: #f8f9fa;
+            --bg: #f4f7f9;
             --card: #ffffff;
             --primary: #1a73e8;
             --tabungan: #27ae60;
@@ -16,7 +16,7 @@
             --light-text: #70757a;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
@@ -32,26 +32,34 @@
             color: white;
             padding: 25px;
             border-radius: 24px;
-            box-shadow: 0 8px 16px rgba(26, 115, 232, 0.25);
-            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(26, 115, 232, 0.2);
+            margin-bottom: 20px;
         }
         .summary-header h2 { margin: 0; font-size: 1.4rem; }
         .summary-header p { margin: 5px 0 20px 0; opacity: 0.8; font-size: 0.85rem; }
         
-        .grid-saldo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .saldo-item { background: rgba(255,255,255,0.12); padding: 12px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
-        .saldo-label { font-size: 0.65rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; opacity: 0.9; }
+        /* Grid Saldo Utama */
+        .grid-saldo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 15px; }
+        .saldo-item { background: rgba(255,255,255,0.15); padding: 12px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.1); }
+        .saldo-label { font-size: 0.65rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; }
         .saldo-val { font-size: 1.1rem; font-weight: 700; }
+
+        /* Stats Kecil (Baru) */
+        .stats-mini { 
+            display: flex; justify-content: space-between; 
+            background: rgba(0,0,0,0.2); padding: 10px 15px; border-radius: 12px; font-size: 0.75rem; 
+        }
+        .stats-mini span b { color: #fff; }
 
         /* SEKSI HISTORI */
         .section-title { 
-            font-size: 0.95rem; font-weight: 700; color: var(--primary); 
-            margin: 25px 0 12px 5px; display: flex; align-items: center;
-            text-transform: uppercase; letter-spacing: 0.5px;
+            font-size: 0.9rem; font-weight: 700; color: #5f6368; 
+            margin: 25px 0 10px 5px; display: flex; align-items: center;
+            text-transform: uppercase; letter-spacing: 0.8px;
         }
-        .section-title span { margin-right: 10px; font-size: 1.2rem; }
+        .section-title span { margin-right: 10px; }
 
-        .card-list { background: var(--card); border-radius: 18px; padding: 5px 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .card-list { background: var(--card); border-radius: 20px; padding: 5px 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
         
         .row-item {
             display: flex; justify-content: space-between; align-items: center;
@@ -59,14 +67,14 @@
         }
         .row-item:last-child { border-bottom: none; }
         
-        .info-main { font-size: 0.88rem; font-weight: 600; color: #202124; }
-        .info-sub { font-size: 0.75rem; color: var(--light-text); margin-top: 3px; }
+        .info-main { font-size: 0.85rem; font-weight: 600; color: #202124; }
+        .info-sub { font-size: 0.72rem; color: var(--light-text); margin-top: 2px; }
         
-        .amt { font-weight: 700; font-size: 0.9rem; }
+        .amt { font-weight: 700; font-size: 0.88rem; }
         .plus { color: var(--tabungan); }
         .minus { color: var(--danger); }
         .bonus-plus { color: var(--bonus); }
-        .no-bonus { color: #bdc3c7; font-weight: 400; font-style: italic; font-size: 0.8rem; }
+        .no-bonus { color: #bdc3c7; font-weight: 400; font-style: italic; font-size: 0.75rem; }
 
         .empty-state { text-align: center; padding: 30px; color: #9aa0a6; font-size: 0.85rem; }
         .hidden { display: none; }
@@ -76,7 +84,7 @@
 <body>
 
 <div class="container">
-    <div id="loading" class="loading">Memuat Data Transaksi...</div>
+    <div id="loading" class="loading">Sinkronisasi Data...</div>
 
     <div id="main-content" class="hidden">
         
@@ -95,15 +103,17 @@
                     <span class="saldo-val" id="s-bon">0</span>
                 </div>
             </div>
+            <div class="stats-mini">
+                <span>Dapat Bonus: <b id="cnt-bon">0</b></span>
+                <span>Tanpa Bonus: <b id="cnt-nobon">0</b></span>
+            </div>
         </div>
 
         <div class="section-title"><span>🎁</span> Histori Bonus</div>
-        <div class="card-list" id="list-bonus">
-            </div>
+        <div class="card-list" id="list-bonus"></div>
 
-        <div class="section-title"><span>📂</span> Histori Tabungan</div>
-        <div class="card-list" id="list-tabungan">
-            </div>
+        <div class="section-title"><span>💰</span> Histori Tabungan</div>
+        <div class="card-list" id="list-tabungan"></div>
 
     </div>
 
@@ -132,7 +142,7 @@
         const token = urlParams.get('token');
 
         if (!token) {
-            document.getElementById('loading').innerHTML = "Akses Ditolak.<br><small>Token diperlukan untuk melihat data.</small>";
+            document.getElementById('loading').innerHTML = "Token diperlukan.";
             return;
         }
 
@@ -148,12 +158,13 @@
             const ambils = smartParse(aR);
 
             const user = users.find(u => String(u.token) === String(token));
-            if (!user) throw new Error("Token tidak ditemukan dalam database.");
+            if (!user) throw new Error("Token tidak terdaftar.");
 
             let sTab = 0, sBon = 0;
+            let countBon = 0, countNoBon = 0;
             let hTab = [], hBon = [];
 
-            // PROSES TRANSAKSI (Pemasukan)
+            // PROSES PEMASUKAN
             trans.filter(t => String(t.token) === String(token)).forEach(t => {
                 const valT = parseInt(t.tabungan) || 0;
                 const valB = parseInt(t.bonus) || 0;
@@ -161,20 +172,19 @@
                 sTab += valT; 
                 sBon += valB;
 
-                // Tabungan: Hanya tampil jika ada penambahan
-                if (valT > 0) {
-                    hTab.push({ tgl: t.tanggal, ket: 'Setoran Tabungan', amt: valT, type: 'in' });
-                }
+                if (valT > 0) hTab.push({ tgl: t.tanggal, ket: 'Setoran Tabungan', amt: valT, type: 'in' });
 
-                // Bonus: TAMPILKAN SEMUA (Sesuai Permintaan)
+                // Hitung Statistik Bonus & Isi Histori
                 if (valB > 0) {
+                    countBon++;
                     hBon.push({ tgl: t.tanggal, ket: 'Bonus Transaksi', amt: valB, type: 'in', label: '+1' });
                 } else {
+                    countNoBon++;
                     hBon.push({ tgl: t.tanggal, ket: 'Bonus Transaksi', amt: 0, type: 'none', label: 'tanpa bonus' });
                 }
             });
 
-            // PROSES PENGAMBILAN (Pengeluaran)
+            // PROSES PENGAMBILAN
             ambils.filter(a => String(a.token) === String(token)).forEach(a => {
                 const nil = parseInt(a.nilai) || 0;
                 const jen = (a.jenis || "").toUpperCase();
@@ -188,66 +198,48 @@
                 }
             });
 
-            // Urutkan (Terbaru di Atas)
+            // Sorting
             const sortFn = (a, b) => parseTgl(b.tgl) - parseTgl(a.tgl);
-            hTab.sort(sortFn); 
-            hBon.sort(sortFn);
+            hTab.sort(sortFn); hBon.sort(sortFn);
 
-            // Render Header
+            // Update UI Summary & Stats
             document.getElementById('u-nama').textContent = user.nama;
             document.getElementById('u-token').textContent = user.token;
             document.getElementById('u-base').textContent = user.pangkalan;
             document.getElementById('s-tab').textContent = fmtIDR(sTab);
             document.getElementById('s-bon').textContent = fmtNum(sBon);
+            
+            // Masukkan data statistik baru
+            document.getElementById('cnt-bon').textContent = countBon;
+            document.getElementById('cnt-nobon').textContent = countNoBon;
 
-            // Render Bonus List
+            // Render List Bonus
             const bList = document.getElementById('list-bonus');
-            if (hBon.length === 0) {
-                bList.innerHTML = '<div class="empty-state">Tidak ada aktifitas bonus</div>';
-            } else {
-                bList.innerHTML = hBon.map(i => {
-                    let styleClass = 'no-bonus';
-                    if (i.type === 'in') styleClass = 'bonus-plus';
-                    if (i.type === 'out') styleClass = 'minus';
-                    
-                    return `
-                        <div class="row-item">
-                            <div>
-                                <div class="info-main">${i.ket}</div>
-                                <div class="info-sub">${i.tgl}</div>
-                            </div>
-                            <div class="amt ${styleClass}">${i.label}</div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            // Render Tabungan List
-            const tList = document.getElementById('list-tabungan');
-            if (hTab.length === 0) {
-                tList.innerHTML = '<div class="empty-state">Belum ada histori tabungan</div>';
-            } else {
-                tList.innerHTML = hTab.map(i => `
+            bList.innerHTML = hBon.length === 0 ? '<div class="empty-state">Tidak ada aktifitas</div>' : 
+                hBon.map(i => `
                     <div class="row-item">
-                        <div>
-                            <div class="info-main">${i.ket}</div>
-                            <div class="info-sub">${i.tgl}</div>
-                        </div>
-                        <div class="amt ${i.type === 'in' ? 'plus' : 'minus'}">
-                            ${i.type === 'in' ? '+' : '-'} ${fmtNum(i.amt)}
-                        </div>
+                        <div><div class="info-main">${i.ket}</div><div class="info-sub">${i.tgl}</div></div>
+                        <div class="amt ${i.type === 'in' ? 'bonus-plus' : (i.type === 'out' ? 'minus' : 'no-bonus')}">${i.label}</div>
                     </div>
                 `).join('');
-            }
+
+            // Render List Tabungan
+            const tList = document.getElementById('list-tabungan');
+            tList.innerHTML = hTab.length === 0 ? '<div class="empty-state">Tidak ada histori</div>' : 
+                hTab.map(i => `
+                    <div class="row-item">
+                        <div><div class="info-main">${i.ket}</div><div class="info-sub">${i.tgl}</div></div>
+                        <div class="amt ${i.type === 'in' ? 'plus' : 'minus'}">${i.type === 'in' ? '+' : '-'} ${fmtNum(i.amt)}</div>
+                    </div>
+                `).join('');
 
             document.getElementById('loading').classList.add('hidden');
             document.getElementById('main-content').classList.remove('hidden');
 
         } catch (e) {
             document.getElementById('loading').classList.add('hidden');
-            const errB = document.getElementById('error-box');
-            errB.textContent = "Error: " + e.message;
-            errB.classList.remove('hidden');
+            document.getElementById('error-box').textContent = e.message;
+            document.getElementById('error-box').classList.remove('hidden');
         }
     });
 </script>

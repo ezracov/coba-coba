@@ -1,26 +1,346 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Tabungan</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Saldo & Riwayat</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --success: #27ae60;
+            --danger: #c0392b;
+            --warning: #f39c12;
+            --light: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 25px 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .user-info h2 { margin: 0; font-size: 1.4rem; }
+        .user-info p { margin: 5px 0 0; opacity: 0.8; font-size: 0.9rem; }
+        .badge { 
+            display: inline-block; padding: 2px 8px; border-radius: 4px; 
+            font-size: 0.7rem; background: rgba(255,255,255,0.2); margin-top: 5px;
+        }
+
+        /* Balance Cards */
+        .balance-section {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            margin-top: -30px;
+        }
+        .balance-card {
+            flex: 1;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #ddd;
+        }
+        .b-tabungan { border-color: var(--success); }
+        .b-bonus { border-color: var(--warning); }
+        
+        .label { font-size: 0.75rem; text-transform: uppercase; color: #7f8c8d; letter-spacing: 1px; }
+        .value { font-size: 1.1rem; font-weight: bold; margin-top: 5px; color: #2c3e50; }
+
+        /* History */
+        .history-section {
+            padding: 10px 20px;
+            flex: 1;
+        }
+        .section-title {
+            font-size: 1rem;
+            color: #34495e;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .history-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .h-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .h-left { display: flex; flex-direction: column; }
+        .h-date { font-size: 0.75rem; color: #95a5a6; }
+        .h-desc { font-size: 0.9rem; font-weight: 500; color: #34495e; }
+        .h-right { text-align: right; }
+        .h-amount { font-size: 0.95rem; font-weight: bold; }
+        
+        .text-in { color: var(--success); }
+        .text-out { color: var(--danger); }
+        .text-bonus { color: var(--warning); }
+
+        /* Loading / Error */
+        .loading { text-align: center; padding: 50px; color: #7f8c8d; }
+        .error-msg { text-align: center; padding: 20px; color: var(--danger); background: #fadbd8; margin: 20px; border-radius: 8px; }
+        .hidden { display: none; }
+
+    </style>
 </head>
 <body>
 
-<div class="app">
-  <h2 id="nama">Loading...</h2>
-  <p id="pangkalan"></p>
+    <div class="app-container">
+        <div id="loading" class="loading">Memuat database...</div>
+        <div id="error-box" class="error-msg hidden"></div>
 
-  <div class="card">
-    <h3>Total Tabungan</h3>
-    <p id="total">Rp 0</p>
-  </div>
+        <div id="main-content" class="hidden">
+            <div class="header">
+                <div class="user-info">
+                    <h2 id="user-name">Nama Member</h2>
+                    <p>Token: <span id="user-token">...</span></p>
+                    <span class="badge" id="user-base">Pangkalan</span>
+                </div>
+            </div>
 
-  <h3>Riwayat Pengambilan</h3>
-  <div id="list"></div>
-</div>
+            <div class="balance-section">
+                <div class="balance-card b-tabungan">
+                    <div class="label">Saldo Tabungan</div>
+                    <div class="value" id="saldo-tabungan">Rp 0</div>
+                </div>
+                <div class="balance-card b-bonus">
+                    <div class="label">Saldo Bonus</div>
+                    <div class="value" id="saldo-bonus">0</div>
+                </div>
+            </div>
 
-<script src="script.js"></script>
+            <div class="history-section">
+                <h3 class="section-title">Riwayat Transaksi</h3>
+                <ul class="history-list" id="history-list">
+                    </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Helper Functions ---
+
+        // Format Rupiah
+        const formatRupiah = (num) => {
+            return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(num);
+        };
+
+        // Format Angka Biasa (untuk Bonus jika bukan uang)
+        const formatNumber = (num) => {
+            return new Intl.NumberFormat('id-ID').format(num);
+        };
+
+        // Parse Date DD/MM/YYYY to JS Date Object for sorting
+        const parseDate = (dateStr) => {
+            if(!dateStr) return new Date(0);
+            const [day, month, year] = dateStr.split('/');
+            return new Date(`${year}-${month}-${day}`);
+        };
+
+        // --- 2. Main Logic ---
+
+        document.addEventListener("DOMContentLoaded", async () => {
+            const loading = document.getElementById('loading');
+            const mainContent = document.getElementById('main-content');
+            const errorBox = document.getElementById('error-box');
+            const historyList = document.getElementById('history-list');
+
+            // Ambil Token dari URL (?token=XYZ)
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+
+            if (!token) {
+                loading.classList.add('hidden');
+                errorBox.textContent = "Token tidak ditemukan di alamat URL. Gunakan format ?token=NOMOR";
+                errorBox.classList.remove('hidden');
+                return;
+            }
+
+            try {
+                // Load semua file JSON secara bersamaan
+                const [usersRes, transRes, ambilRes] = await Promise.all([
+                    fetch('users.json'),
+                    fetch('transaksi.json'),
+                    fetch('pengambilan.json')
+                ]);
+
+                if (!usersRes.ok || !transRes.ok || !ambilRes.ok) {
+                    throw new Error("Gagal membaca file database.");
+                }
+
+                const usersData = await usersRes.json();
+                const transData = await transRes.json();
+                const ambilData = await ambilRes.json();
+
+                // 1. Cari User berdasarkan Token
+                // Karena users.json berbentuk array, kita gunakan .find()
+                const user = usersData.find(u => u.token === token);
+
+                if (!user) {
+                    throw new Error(`Member dengan token "${token}" tidak ditemukan.`);
+                }
+
+                // 2. Filter Transaksi (Pemasukan)
+                // Cocokkan token (string comparison)
+                const userTrans = transData.filter(t => t.token === token);
+
+                // 3. Filter Pengambilan (Pengeluaran)
+                const userAmbil = ambilData.filter(a => a.token === token);
+
+                // 4. Hitung Saldo & Gabung History
+                let totalTabungan = 0;
+                let totalBonus = 0;
+                let combinedHistory = [];
+
+                // Proses Pemasukan (Dari transaksi.json)
+                userTrans.forEach(t => {
+                    const tabunganVal = parseInt(t.tabungan) || 0;
+                    const bonusVal = parseInt(t.bonus) || 0;
+
+                    // Tambah saldo
+                    totalTabungan += tabunganVal;
+                    totalBonus += bonusVal;
+
+                    // Catat riwayat jika ada nilai
+                    if (tabunganVal > 0) {
+                        combinedHistory.push({
+                            date: t.tanggal,
+                            desc: 'Setor Tabungan',
+                            amount: tabunganVal,
+                            type: 'in', // Masuk
+                            category: 'tabungan'
+                        });
+                    }
+                    if (bonusVal > 0) {
+                        combinedHistory.push({
+                            date: t.tanggal,
+                            desc: 'Dapat Bonus',
+                            amount: bonusVal,
+                            type: 'in', // Masuk
+                            category: 'bonus'
+                        });
+                    }
+                });
+
+                // Proses Pengeluaran (Dari pengambilan.json)
+                userAmbil.forEach(a => {
+                    const nilaiVal = parseInt(a.nilai) || 0;
+                    const jenis = (a.jenis || "").toUpperCase();
+
+                    // Kurangi saldo berdasarkan jenis
+                    if (jenis === 'TABUNGAN' || jenis === 'PINJAMAN') {
+                        totalTabungan -= nilaiVal;
+                        combinedHistory.push({
+                            date: a.tanggal,
+                            desc: `Ambil ${jenis}`, // Pengambilan Tabungan / Pinjaman
+                            amount: nilaiVal,
+                            type: 'out', // Keluar
+                            category: 'tabungan'
+                        });
+                    } else if (jenis === 'BONUS') {
+                        totalBonus -= nilaiVal;
+                        combinedHistory.push({
+                            date: a.tanggal,
+                            desc: 'Ambil Bonus',
+                            amount: nilaiVal,
+                            type: 'out',
+                            category: 'bonus'
+                        });
+                    }
+                });
+
+                // 5. Urutkan History (Terbaru di atas)
+                combinedHistory.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
+                // 6. Render ke HTML
+                document.getElementById('user-name').textContent = user.nama;
+                document.getElementById('user-token').textContent = user.token;
+                document.getElementById('user-base').textContent = user.pangkalan;
+                
+                document.getElementById('saldo-tabungan').textContent = formatRupiah(totalTabungan);
+                // Note: Bonus ditampilkan sebagai angka biasa (bisa diganti formatRupiah jika bonus itu uang)
+                document.getElementById('saldo-bonus').textContent = formatNumber(totalBonus); 
+
+                // Render List Riwayat
+                historyList.innerHTML = '';
+                if (combinedHistory.length === 0) {
+                    historyList.innerHTML = '<li style="text-align:center; color:#999; padding:20px;">Belum ada transaksi</li>';
+                } else {
+                    combinedHistory.forEach(item => {
+                        const li = document.createElement('li');
+                        li.className = 'h-item';
+                        
+                        // Tentukan warna dan tanda (+/-)
+                        let amountClass = '';
+                        let sign = '';
+                        
+                        if (item.type === 'in') {
+                            if(item.category === 'bonus') amountClass = 'text-bonus';
+                            else amountClass = 'text-in';
+                            sign = '+ ';
+                        } else {
+                            amountClass = 'text-out';
+                            sign = '- ';
+                        }
+
+                        // Jika bonus, format angka biasa, jika tabungan format Rupiah
+                        // (Opsional: sesuaikan dengan kebijakan apakah bonus itu poin atau rupiah)
+                        // Disini saya asumsikan bonus adalah Unit/Poin karena datanya kecil (0/1), 
+                        // TAPI di pengambilan ada 125.000. 
+                        // JADI: Saya pakai format Rupiah untuk semua agar aman.
+                        const displayAmount = formatNumber(item.amount); 
+
+                        li.innerHTML = `
+                            <div class="h-left">
+                                <span class="h-desc">${item.desc}</span>
+                                <span class="h-date">${item.date}</span>
+                            </div>
+                            <div class="h-right">
+                                <span class="h-amount ${amountClass}">${sign}${displayAmount}</span>
+                            </div>
+                        `;
+                        historyList.appendChild(li);
+                    });
+                }
+
+                // Tampilkan UI
+                loading.classList.add('hidden');
+                mainContent.classList.remove('hidden');
+
+            } catch (err) {
+                loading.classList.add('hidden');
+                errorBox.textContent = "Terjadi Kesalahan: " + err.message;
+                errorBox.classList.remove('hidden');
+                console.error(err);
+            }
+        });
+    </script>
 </body>
 </html>

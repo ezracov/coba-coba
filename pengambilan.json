@@ -378,5 +378,5 @@
 {"token": "517", "nama": "CEPOT", "pangkalan":"PESONA ALAM", "tanggal":"03/02/2026", "jenis":"TABUNGAN", "nilai":120000},
 {"token": "362", "nama": "OBENG", "pangkalan":"4G", "tanggal":"03/02/2026", "jenis":"TABUNGAN", "nilai":850000},
 {"token": "336", "nama": "DARUS", "pangkalan":"NNC", "tanggal":"04/02/2026", "jenis":"TABUNGAN", "nilai":2210000},
-{"token": "108", "nama": "TYO", "pangkalan":"JRC", "tanggal":"31/01/2026", "jenis":"PINJAMAN", "nilai":1000000},
+{"token": "108", "nama": "TYO", "pangkalan":"JRC", "tanggal":"31/01/2026", "jenis":"PINJAMAN", "nilai":1000000}
 ]

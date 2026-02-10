@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Member - Monitoring Saldo</title>
+    <title>Panel Member - Premium Look</title>
     <style>
         :root {
             --bg: #f4f7f9;
             --card: #ffffff;
-            --primary: #1a73e8;
-            --tabungan: #27ae60;
+            --primary: #2c3e50; /* Warna gelap profesional */
+            --tabungan: #2ecc71; /* Hijau daun */
             --bonus: #f39c12;
             --danger: #e74c3c;
             --text: #3c4043;
             --light-text: #70757a;
+            
+            /* Gradient Hitam Abu-abu */
+            --grad-summary: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            /* Hijau Daun untuk Grid */
+            --grad-grid: rgba(39, 174, 96, 0.9); 
         }
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -26,30 +31,31 @@
         }
         .container { width: 100%; max-width: 500px; }
         
-        /* 1. SEKSI SUMMARY */
+        /* 1. SEKSI SUMMARY - HITAM GRADASI ABU */
         .section-summary {
-            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            background: var(--grad-summary);
             color: white;
             padding: 25px;
             border-radius: 24px;
-            box-shadow: 0 10px 20px rgba(26, 115, 232, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             margin-bottom: 20px;
         }
-        .summary-header h2 { margin: 0; font-size: 1.4rem; }
-        .summary-header p { margin: 5px 0 20px 0; opacity: 0.8; font-size: 0.85rem; }
+        .summary-header h2 { margin: 0; font-size: 1.4rem; letter-spacing: 0.5px; }
+        .summary-header p { margin: 5px 0 20px 0; opacity: 0.7; font-size: 0.85rem; }
         
         .grid-saldo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 15px; }
         
-        /* Style Default Item Saldo */
+        /* GRID SALDO - HIJAU DAUN */
         .saldo-item { 
-            background: rgba(255,255,255,0.15); 
+            background: var(--grad-grid); 
             padding: 12px; 
             border-radius: 14px; 
-            border: 1px solid rgba(255,255,255,0.1); 
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
             transition: all 0.3s ease;
         }
         
-        /* STYLE KHUSUS JIKA MINUS */
+        /* ALERT JIKA MINUS */
         .saldo-item.minus-bg {
             background: var(--danger) !important;
             border: 1px solid rgba(255,255,255,0.5);
@@ -64,12 +70,13 @@
             100% { transform: translateX(0); }
         }
 
-        .saldo-label { font-size: 0.65rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; }
+        .saldo-label { font-size: 0.65rem; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; display: block; opacity: 0.9; }
         .saldo-val { font-size: 1.1rem; font-weight: 700; }
 
         .stats-mini { 
             display: flex; justify-content: space-between; 
-            background: rgba(0,0,0,0.2); padding: 10px 15px; border-radius: 12px; font-size: 0.75rem; 
+            background: rgba(255,255,255,0.1); padding: 10px 15px; border-radius: 12px; font-size: 0.75rem; 
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         /* SEKSI HISTORI */
@@ -99,13 +106,13 @@
 
         .empty-state { text-align: center; padding: 30px; color: #9aa0a6; font-size: 0.85rem; }
         .hidden { display: none; }
-        .loading { text-align: center; margin-top: 100px; font-weight: 500; color: var(--primary); }
+        .loading { text-align: center; margin-top: 100px; font-weight: 500; color: #2c3e50; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div id="loading" class="loading">Memuat Data...</div>
+    <div id="loading" class="loading">Memperbarui Tampilan...</div>
 
     <div id="main-content" class="hidden">
         
@@ -142,6 +149,7 @@
 </div>
 
 <script>
+    // Logika JS sama seperti sebelumnya, tetap tangguh menghitung saldo & bonus
     const fmtIDR = (v) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(v);
     const fmtNum = (v) => new Intl.NumberFormat('id-ID').format(v);
     
@@ -163,7 +171,7 @@
         const token = urlParams.get('token');
 
         if (!token) {
-            document.getElementById('loading').innerHTML = "Token tidak valid.";
+            document.getElementById('loading').innerHTML = "Sesi Berakhir.";
             return;
         }
 
@@ -179,17 +187,15 @@
             const ambils = smartParse(aR);
 
             const user = users.find(u => String(u.token) === String(token));
-            if (!user) throw new Error("Token tidak terdaftar.");
+            if (!user) throw new Error("Member tidak ditemukan.");
 
-            let sTab = 0, sBon = 0;
-            let countBon = 0, countNoBon = 0;
+            let sTab = 0, sBon = 0, countBon = 0, countNoBon = 0;
             let hTab = [], hBon = [];
 
             trans.filter(t => String(t.token) === String(token)).forEach(t => {
                 const valT = parseInt(t.tabungan) || 0;
                 const valB = parseInt(t.bonus) || 0;
                 sTab += valT; sBon += valB;
-
                 if (valT > 0) hTab.push({ tgl: t.tanggal, ket: 'Setoran Tabungan', amt: valT, type: 'in' });
                 if (valB > 0) {
                     countBon++;
@@ -203,7 +209,6 @@
             ambils.filter(a => String(a.token) === String(token)).forEach(a => {
                 const nil = parseInt(a.nilai) || 0;
                 const jen = (a.jenis || "").toUpperCase();
-                
                 if (jen === 'TABUNGAN' || jen === 'PINJAMAN') {
                     sTab -= nil;
                     hTab.push({ tgl: a.tanggal, ket: `Ambil ${jen}`, amt: nil, type: 'out' });
@@ -216,13 +221,9 @@
             const sortFn = (a, b) => parseTgl(b.tgl) - parseTgl(a.tgl);
             hTab.sort(sortFn); hBon.sort(sortFn);
 
-            // LOGIKA WARNA MERAH UNTUK SALDO MINUS
+            // Update UI & Saldo Minus Check
             const tabContainer = document.getElementById('s-tab-container');
-            if (sTab < 0) {
-                tabContainer.classList.add('minus-bg');
-            } else {
-                tabContainer.classList.remove('minus-bg');
-            }
+            if (sTab < 0) tabContainer.classList.add('minus-bg');
 
             document.getElementById('u-nama').textContent = user.nama;
             document.getElementById('u-token').textContent = user.token;
@@ -232,9 +233,8 @@
             document.getElementById('cnt-bon').textContent = countBon;
             document.getElementById('cnt-nobon').textContent = countNoBon;
 
-            // Render Lists
             const render = (el, data, isTab) => {
-                el.innerHTML = data.length === 0 ? '<div class="empty-state">Tidak ada histori</div>' : 
+                el.innerHTML = data.length === 0 ? '<div class="empty-state">Data Kosong</div>' : 
                     data.map(i => `
                         <div class="row-item">
                             <div><div class="info-main">${i.ket}</div><div class="info-sub">${i.tgl}</div></div>

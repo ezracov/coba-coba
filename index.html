@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content">Loading...</div>
+
+<script>
+  // ambil token dari URL
+  const params = new URLSearchParams(window.location.search);
+  const token = params.get("token");
+
+  if (!token) {
+    document.getElementById("content").innerText = "Token tidak ditemukan";
+    throw new Error("No token");
+  }
+
+  // ambil data dari JSON
+  fetch("users.json")
+    .then(res => res.json())
+    .then(users => {
+      const user = users.find(u => u.token === token);
+
+      if (!user) {
+        document.getElementById("content").innerText = "User tidak valid";
+        return;
+      }
+
+      document.getElementById("content").innerHTML = `
+        <div class="card">
+          <h2>Welcome</h2>
+          <p><strong>Name:</strong> ${user.name}</p>
+          <p><strong>Role:</strong> ${user.role}</p>
+          <p><strong>User ID:</strong> ${user.id}</p>
+        </div>
+      `;
+    });
+</script>
+
+</body>
+</html>

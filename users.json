@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Ezra",
+    "token": "abc123",
+    "role": "Accounting Supervisor"
+  },
+  {
+    "id": 2,
+    "name": "Andi",
+    "token": "xyz789",
+    "role": "Production Staff"
+  }
+]

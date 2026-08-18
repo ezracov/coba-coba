@@ -3,128 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aplikasi Stok Barang - Supabase</title>
-  <!-- Load Supabase JS Client via CDN -->
+  <title>Aplikasi Catatan Supabase</title>
+  <!-- Load Supabase JS Client library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 30px auto; padding: 0 20px; }
-    form { display: flex; gap: 10px; margin-bottom: 20px; }
-    input { padding: 8px; font-size: 14px; }
-    button { padding: 8px 12px; cursor: pointer; background: #3ecf8e; border: none; color: white; border-radius: 4px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background-color: #f4f4f4; }
-    .btn-del { background: #ff4d4f; }
+    body { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; }
+    h2 { color: #333; }
+    .form-group { display: flex; gap: 10px; margin-bottom: 20px; }
+    input[type="text"] { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    button { padding: 10px 15px; background-color: #3ecf8e; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background-color: #2eaf72; }
+    ul { list-style: none; padding: 0; }
+    li { background: #f4f4f4; padding: 10px; margin-bottom: 8px; border-radius: 4px; display: flex; justify-content: space-between; align-items: center; }
+    .delete-btn { background: #ff4d4d; padding: 5px 10px; font-size: 12px; }
   </style>
 </head>
 <body>
 
-  <h2>Manajemen Stok Barang</h2>
+  <h2>Catatan Saya</h2>
+  
+  <div class="form-group">
+    <input type="text" id="noteInput" placeholder="Tulis catatan baru...">
+    <button onclick="addNote()">Tambah</button>
+  </div>
 
-  <!-- Form Tambah Data -->
-  <form id="stokForm">
-    <input type="text" id="namaBarang" placeholder="Nama Barang" required>
-    <input type="number" id="jumlahBarang" placeholder="Jumlah" required min="1">
-    <button type="submit">Tambah Barang</button>
-  </form>
-
-  <!-- Tabel Tampil Data -->
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nama Barang</th>
-        <th>Jumlah</th>
-        <th>Aksi</th>
-      </tr>
-    </thead>
-    <tbody id="tabelStok">
-      <tr><td colspan="4">Memuat data...</td></tr>
-    </tbody>
-  </table>
+  <ul id="notesList"></ul>
 
   <script>
-    // 1. Konfigurasi Kredensial Supabase Anda
+    // Konfigurasi Supabase
     const SUPABASE_URL = 'https://bhvdieqxlrcxaoetpfnf.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_8-LtLA8sjuNFmZ-BPqHTqA_Tq4z7V_J';
-    
-    // Inisialisasi Client Supabase
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // DOM Elements
-    const form = document.getElementById('stokForm');
-    const namaInput = document.getElementById('namaBarang');
-    const jumlahInput = document.getElementById('jumlahBarang');
-    const tabelBody = document.getElementById('tabelStok');
-
-    // 2. Fungsi Ambil Data (READ)
-    async function fetchProduk() {
+    // 1. Ambil Data Catatan (Read)
+    async function fetchNotes() {
       const { data, error } = await supabase
-        .from('produk')
+        .from('notes')
         .select('*')
-        .order('id', { ascending: true });
+        .order('id', { ascending: false });
 
       if (error) {
         console.error('Gagal mengambil data:', error);
-        tabelBody.innerHTML = `<tr><td colspan="4">Gagal memuat data</td></tr>`;
         return;
       }
 
-      if (data.length === 0) {
-        tabelBody.innerHTML = `<tr><td colspan="4">Belum ada barang.</td></tr>`;
-        return;
-      }
-
-      tabelBody.innerHTML = data.map(item => `
-        <tr>
-          <td>${item.id}</td>
-          <td>${item.nama_barang}</td>
-          <td>${item.jumlah}</td>
-          <td>
-            <button class="btn-del" onclick="hapusProduk(${item.id})">Hapus</button>
-          </td>
-        </tr>
-      `).join('');
+      const listContainer = document.getElementById('notesList');
+      listContainer.innerHTML = '';
+      
+      data.forEach(note => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${note.title}</span>
+          <button class="delete-btn" onclick="deleteNote(${note.id})">Hapus</button>
+        `;
+        listContainer.appendChild(li);
+      });
     }
 
-    // 3. Fungsi Tambah Data (CREATE)
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const nama = namaInput.value;
-      const jumlah = parseInt(jumlahInput.value);
+    // 2. Tambah Catatan Baru (Create)
+    async function addNote() {
+      const input = document.getElementById('noteInput');
+      const title = input.value.trim();
+
+      if (!title) return alert('Catatan tidak boleh kosong!');
 
       const { error } = await supabase
-        .from('produk')
-        .insert([{ nama_barang: nama, jumlah: jumlah }]);
+        .from('notes')
+        .insert([{ title: title }]);
 
       if (error) {
-        alert('Gagal menambah barang: ' + error.message);
+        console.error('Gagal menambah catatan:', error);
       } else {
-        namaInput.value = '';
-        jumlahInput.value = '';
-        fetchProduk(); // Refresh tabel
+        input.value = '';
+        fetchNotes(); // Refresh daftar catatan
       }
-    });
+    }
 
-    // 4. Fungsi Hapus Data (DELETE)
-    async function hapusProduk(id) {
-      if (!confirm('Yakin ingin menghapus data ini?')) return;
-
+    // 3. Hapus Catatan (Delete)
+    async function deleteNote(id) {
       const { error } = await supabase
-        .from('produk')
+        .from('notes')
         .delete()
         .eq('id', id);
 
       if (error) {
-        alert('Gagal menghapus: ' + error.message);
+        console.error('Gagal menghapus catatan:', error);
       } else {
-        fetchProduk(); // Refresh tabel
+        fetchNotes(); // Refresh daftar catatan
       }
     }
 
-    // Load data pertama kali saat halaman dibuka
-    fetchProduk();
+    // Muat data saat pertama kali halaman dibuka
+    fetchNotes();
   </script>
 </body>
 </html>

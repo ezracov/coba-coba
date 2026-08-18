@@ -1,266 +1,130 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Member - Sticky Summary</title>
-    <style>
-        :root {
-            --bg: #f4f7f9;
-            --card: #ffffff;
-            --primary: #2c3e50;
-            --tabungan: #2ecc71; /* Hijau Daun */
-            --bonus: #f39c12;
-            --danger: #e74c3c;
-            --text: #3c4043;
-            --light-text: #70757a;
-            --grad-summary: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-            --grad-grid: rgba(39, 174, 96, 0.9); 
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 0; /* Padding dipindah ke container */
-            display: flex;
-            justify-content: center;
-        }
-
-        .container { 
-            width: 100%; 
-            max-width: 500px; 
-            padding: 0 15px 20px 15px;
-        }
-        
-        /* --- BAGIAN STICKY SUMMARY --- */
-        .sticky-wrapper {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: var(--bg); /* Menutup konten di bawah saat scroll */
-            padding: 15px 0 10px 0;
-        }
-
-        .section-summary {
-            background: var(--grad-summary);
-            color: white;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
-
-        .summary-header h2 { margin: 0; font-size: 1.3rem; letter-spacing: 0.5px; }
-        .summary-header p { margin: 4px 0 15px 0; opacity: 0.7; font-size: 0.8rem; }
-        
-        .grid-saldo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
-        
-        .saldo-item { 
-            background: var(--grad-grid); 
-            padding: 10px; 
-            border-radius: 12px; 
-            border: 1px solid rgba(255,255,255,0.2);
-            color: white;
-        }
-        
-        .saldo-item.minus-bg {
-            background: var(--danger) !important;
-            animation: shake 0.5s;
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-4px); }
-            75% { transform: translateX(4px); }
-        }
-
-        .saldo-label { font-size: 0.6rem; text-transform: uppercase; font-weight: 700; margin-bottom: 2px; display: block; opacity: 0.9; }
-        .saldo-val { font-size: 1rem; font-weight: 700; }
-
-        .stats-mini { 
-            display: flex; justify-content: space-between; 
-            background: rgba(255,255,255,0.1); padding: 8px 12px; border-radius: 10px; font-size: 0.7rem; 
-        }
-
-        /* --- BAGIAN SCROLLABLE CONTENT --- */
-        .section-title { 
-            font-size: 0.85rem; font-weight: 700; color: #5f6368; 
-            margin: 20px 0 10px 5px; display: flex; align-items: center;
-            text-transform: uppercase; letter-spacing: 0.8px;
-        }
-        .section-title span { margin-right: 10px; }
-
-        .card-list { background: var(--card); border-radius: 18px; padding: 5px 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); margin-bottom: 10px; }
-        
-        .row-item {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 0; border-bottom: 1px solid #f1f3f4;
-        }
-        .row-item:last-child { border-bottom: none; }
-        
-        .info-main { font-size: 0.8rem; font-weight: 600; color: #202124; }
-        .info-sub { font-size: 0.7rem; color: var(--light-text); margin-top: 2px; }
-        
-        .amt { font-weight: 700; font-size: 0.85rem; }
-        .plus { color: var(--tabungan); }
-        .minus { color: var(--danger); }
-        .bonus-plus { color: var(--bonus); }
-        .no-bonus { color: #bdc3c7; font-weight: 400; font-style: italic; font-size: 0.7rem; }
-
-        .empty-state { text-align: center; padding: 30px; color: #9aa0a6; font-size: 0.8rem; }
-        .hidden { display: none; }
-        .loading { text-align: center; margin-top: 100px; font-weight: 500; color: #2c3e50; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Stok Barang - Supabase</title>
+  <!-- Load Supabase JS Client via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 30px auto; padding: 0 20px; }
+    form { display: flex; gap: 10px; margin-bottom: 20px; }
+    input { padding: 8px; font-size: 14px; }
+    button { padding: 8px 12px; cursor: pointer; background: #3ecf8e; border: none; color: white; border-radius: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    .btn-del { background: #ff4d4f; }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <div id="loading" class="loading">Menyiapkan Dashboard...</div>
+  <h2>Manajemen Stok Barang</h2>
 
-    <div id="main-content" class="hidden">
-        
-        <div class="sticky-wrapper">
-            <div class="section-summary">
-                <div class="summary-header">
-                    <h2 id="u-nama">Nama Member</h2>
-                    <p><span id="u-base">Pangkalan</span> • ID: <span id="u-token">...</span></p>
-                </div>
-                <div class="grid-saldo">
-                    <div class="saldo-item" id="s-tab-container">
-                        <span class="saldo-label">Total Tabungan</span>
-                        <span class="saldo-val" id="s-tab">Rp 0</span>
-                    </div>
-                    <div class="saldo-item">
-                        <span class="saldo-label">Total Bonus</span>
-                        <span class="saldo-val" id="s-bon">0</span>
-                    </div>
-                </div>
-                <div class="stats-mini">
-                    <span>Dapat Bonus: <b id="cnt-bon">0</b></span>
-                    <span>Tanpa Bonus: <b id="cnt-nobon">0</b></span>
-                </div>
-            </div>
-        </div>
+  <!-- Form Tambah Data -->
+  <form id="stokForm">
+    <input type="text" id="namaBarang" placeholder="Nama Barang" required>
+    <input type="number" id="jumlahBarang" placeholder="Jumlah" required min="1">
+    <button type="submit">Tambah Barang</button>
+  </form>
 
-        <div class="section-title"><span>🎁</span> Histori Bonus</div>
-        <div class="card-list" id="list-bonus"></div>
+  <!-- Tabel Tampil Data -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nama Barang</th>
+        <th>Jumlah</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody id="tabelStok">
+      <tr><td colspan="4">Memuat data...</td></tr>
+    </tbody>
+  </table>
 
-        <div class="section-title"><span>💰</span> Histori Tabungan</div>
-        <div class="card-list" id="list-tabungan"></div>
-
-    </div>
-
-    <div id="error-box" class="empty-state hidden" style="color:var(--danger);"></div>
-</div>
-
-<script>
-    // Logika JS tetap sama untuk keandalan data
-    const fmtIDR = (v) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(v);
-    const fmtNum = (v) => new Intl.NumberFormat('id-ID').format(v);
+  <script>
+    // 1. Konfigurasi Kredensial Supabase Anda
+    const SUPABASE_URL = 'https://bhvdieqxlrcxaoetpfnf.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_8-LtLA8sjuNFmZ-BPqHTqA_Tq4z7V_J';
     
-    const parseTgl = (s) => {
-        if(!s) return new Date(0);
-        const [d, m, y] = s.split('/');
-        return new Date(`${y}-${m}-${d}`);
-    };
+    // Inisialisasi Client Supabase
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    const smartParse = (txt) => {
-        let c = txt.trim().replace(/,\s*([\]}])/g, '$1').replace(/}\s*{/g, '},{');
-        if (!c.startsWith('[')) c = '[' + c;
-        if (!c.endsWith(']')) c = c + ']';
-        return JSON.parse(c.replace(/\[\s*\[/g, '[').replace(/\]\s*\]/g, ']'));
-    };
+    // DOM Elements
+    const form = document.getElementById('stokForm');
+    const namaInput = document.getElementById('namaBarang');
+    const jumlahInput = document.getElementById('jumlahBarang');
+    const tabelBody = document.getElementById('tabelStok');
 
-    document.addEventListener("DOMContentLoaded", async () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const token = urlParams.get('token');
+    // 2. Fungsi Ambil Data (READ)
+    async function fetchProduk() {
+      const { data, error } = await supabase
+        .from('produk')
+        .select('*')
+        .order('id', { ascending: true });
 
-        if (!token) {
-            document.getElementById('loading').innerHTML = "Token tidak ditemukan.";
-            return;
-        }
+      if (error) {
+        console.error('Gagal mengambil data:', error);
+        tabelBody.innerHTML = `<tr><td colspan="4">Gagal memuat data</td></tr>`;
+        return;
+      }
 
-        try {
-            const [uR, tR, aR] = await Promise.all([
-                fetch('users.json').then(r => r.text()),
-                fetch('transaksi.json').then(r => r.text()),
-                fetch('pengambilan.json').then(r => r.text())
-            ]);
+      if (data.length === 0) {
+        tabelBody.innerHTML = `<tr><td colspan="4">Belum ada barang.</td></tr>`;
+        return;
+      }
 
-            const users = smartParse(uR);
-            const trans = smartParse(tR);
-            const ambils = smartParse(aR);
+      tabelBody.innerHTML = data.map(item => `
+        <tr>
+          <td>${item.id}</td>
+          <td>${item.nama_barang}</td>
+          <td>${item.jumlah}</td>
+          <td>
+            <button class="btn-del" onclick="hapusProduk(${item.id})">Hapus</button>
+          </td>
+        </tr>
+      `).join('');
+    }
 
-            const user = users.find(u => String(u.token) === String(token));
-            if (!user) throw new Error("Data Member tidak ada.");
+    // 3. Fungsi Tambah Data (CREATE)
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const nama = namaInput.value;
+      const jumlah = parseInt(jumlahInput.value);
 
-            let sTab = 0, sBon = 0, countBon = 0, countNoBon = 0;
-            let hTab = [], hBon = [];
+      const { error } = await supabase
+        .from('produk')
+        .insert([{ nama_barang: nama, jumlah: jumlah }]);
 
-            trans.filter(t => String(t.token) === String(token)).forEach(t => {
-                const valT = parseInt(t.tabungan) || 0;
-                const valB = parseInt(t.bonus) || 0;
-                sTab += valT; sBon += valB;
-                if (valT > 0) hTab.push({ tgl: t.tanggal, ket: 'Setoran Tabungan', amt: valT, type: 'in' });
-                if (valB > 0) {
-                    countBon++;
-                    hBon.push({ tgl: t.tanggal, ket: 'Bonus Transaksi', amt: valB, type: 'in', label: '+1' });
-                } else {
-                    countNoBon++;
-                    hBon.push({ tgl: t.tanggal, ket: 'Bonus Transaksi', amt: 0, type: 'none', label: 'tanpa bonus' });
-                }
-            });
-
-            ambils.filter(a => String(a.token) === String(token)).forEach(a => {
-                const nil = parseInt(a.nilai) || 0;
-                const jen = (a.jenis || "").toUpperCase();
-                if (jen === 'TABUNGAN' || jen === 'PINJAMAN') {
-                    sTab -= nil;
-                    hTab.push({ tgl: a.tanggal, ket: `Ambil ${jen}`, amt: nil, type: 'out' });
-                } else if (jen === 'BONUS') {
-                    sBon -= nil;
-                    hBon.push({ tgl: a.tanggal, ket: 'Tarik Bonus', amt: nil, type: 'out', label: `-${nil}` });
-                }
-            });
-
-            const sortFn = (a, b) => parseTgl(b.tgl) - parseTgl(a.tgl);
-            hTab.sort(sortFn); hBon.sort(sortFn);
-
-            if (sTab < 0) document.getElementById('s-tab-container').classList.add('minus-bg');
-
-            document.getElementById('u-nama').textContent = user.nama;
-            document.getElementById('u-token').textContent = user.token;
-            document.getElementById('u-base').textContent = user.pangkalan;
-            document.getElementById('s-tab').textContent = fmtIDR(sTab);
-            document.getElementById('s-bon').textContent = fmtNum(sBon);
-            document.getElementById('cnt-bon').textContent = countBon;
-            document.getElementById('cnt-nobon').textContent = countNoBon;
-
-            const render = (el, data, isTab) => {
-                el.innerHTML = data.length === 0 ? '<div class="empty-state">Belum ada riwayat.</div>' : 
-                    data.map(i => `
-                        <div class="row-item">
-                            <div><div class="info-main">${i.ket}</div><div class="info-sub">${i.tgl}</div></div>
-                            <div class="amt ${isTab ? (i.type === 'in' ? 'plus' : 'minus') : (i.type === 'in' ? 'bonus-plus' : (i.type === 'out' ? 'minus' : 'no-bonus'))}">
-                                ${isTab ? (i.type === 'in' ? '+' : '-') : ''} ${isTab ? fmtNum(i.amt) : i.label}
-                            </div>
-                        </div>
-                    `).join('');
-            };
-
-            render(document.getElementById('list-bonus'), hBon, false);
-            render(document.getElementById('list-tabungan'), hTab, true);
-
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('main-content').classList.remove('hidden');
-
-        } catch (e) {
-            document.getElementById('loading').classList.add('hidden');
-            document.getElementById('error-box').textContent = e.message;
-            document.getElementById('error-box').classList.remove('hidden');
-        }
+      if (error) {
+        alert('Gagal menambah barang: ' + error.message);
+      } else {
+        namaInput.value = '';
+        jumlahInput.value = '';
+        fetchProduk(); // Refresh tabel
+      }
     });
-</script>
+
+    // 4. Fungsi Hapus Data (DELETE)
+    async function hapusProduk(id) {
+      if (!confirm('Yakin ingin menghapus data ini?')) return;
+
+      const { error } = await supabase
+        .from('produk')
+        .delete()
+        .eq('id', id);
+
+      if (error) {
+        alert('Gagal menghapus: ' + error.message);
+      } else {
+        fetchProduk(); // Refresh tabel
+      }
+    }
+
+    // Load data pertama kali saat halaman dibuka
+    fetchProduk();
+  </script>
 </body>
 </html>

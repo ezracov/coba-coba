@@ -29,72 +29,72 @@
 
   <ul id="notesList"></ul>
 
-  <script>
-    // Konfigurasi Supabase
-    const SUPABASE_URL = 'https://bhvdieqxlrcxaoetpfnf.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_8-LtLA8sjuNFmZ-BPqHTqA_Tq4z7V_J';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+<script>
+  // 1. Ubah nama variabel dari 'supabase' menjadi 'supabaseClient'
+  const SUPABASE_URL = 'YOUR_SUPABASE_URL';
+  const SUPABASE_KEY = 'YOUR_SUPABASE_ANON_KEY';
+  const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // 1. Ambil Data Catatan (Read)
-    async function fetchNotes() {
-      const { data, error } = await supabase
-        .from('notes')
-        .select('*')
-        .order('id', { ascending: false });
+  // 2. Ambil Data Catatan (Read)
+  async function fetchNotes() {
+    const { data, error } = await supabaseClient
+      .from('notes')
+      .select('*')
+      .order('id', { ascending: false });
 
-      if (error) {
-        console.error('Gagal mengambil data:', error);
-        return;
-      }
-
-      const listContainer = document.getElementById('notesList');
-      listContainer.innerHTML = '';
-      
-      data.forEach(note => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <span>${note.title}</span>
-          <button class="delete-btn" onclick="deleteNote(${note.id})">Hapus</button>
-        `;
-        listContainer.appendChild(li);
-      });
+    if (error) {
+      console.error('Gagal mengambil data:', error);
+      return;
     }
 
-    // 2. Tambah Catatan Baru (Create)
-    async function addNote() {
-      const input = document.getElementById('noteInput');
-      const title = input.value.trim();
+    const listContainer = document.getElementById('notesList');
+    listContainer.innerHTML = '';
+    
+    data.forEach(note => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <span>${note.title}</span>
+        <button class="delete-btn" onclick="deleteNote(${note.id})">Hapus</button>
+      `;
+      listContainer.appendChild(li);
+    });
+  }
 
-      if (!title) return alert('Catatan tidak boleh kosong!');
+  // 3. Tambah Catatan Baru (Create)
+  async function addNote() {
+    const input = document.getElementById('noteInput');
+    const title = input.value.trim();
 
-      const { error } = await supabase
-        .from('notes')
-        .insert([{ title: title }]);
+    if (!title) return alert('Catatan tidak boleh kosong!');
 
-      if (error) {
-        console.error('Gagal menambah catatan:', error);
-      } else {
-        input.value = '';
-        fetchNotes(); // Refresh daftar catatan
-      }
+    const { error } = await supabaseClient
+      .from('notes')
+      .insert([{ title: title }]);
+
+    if (error) {
+      console.error('Gagal menambah catatan:', error);
+    } else {
+      input.value = '';
+      fetchNotes();
     }
+  }
 
-    // 3. Hapus Catatan (Delete)
-    async function deleteNote(id) {
-      const { error } = await supabase
-        .from('notes')
-        .delete()
-        .eq('id', id);
+  // 4. Hapus Catatan (Delete)
+  async function deleteNote(id) {
+    const { error } = await supabaseClient
+      .from('notes')
+      .delete()
+      .eq('id', id);
 
-      if (error) {
-        console.error('Gagal menghapus catatan:', error);
-      } else {
-        fetchNotes(); // Refresh daftar catatan
-      }
+    if (error) {
+      console.error('Gagal menghapus catatan:', error);
+    } else {
+      fetchNotes();
     }
+  }
 
-    // Muat data saat pertama kali halaman dibuka
-    fetchNotes();
-  </script>
+  // Jalankan saat pertama kali dibuka
+  fetchNotes();
+</script>
 </body>
 </html>
